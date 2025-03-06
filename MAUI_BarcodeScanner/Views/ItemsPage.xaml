@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUI_BarcodeScanner.Views.ItemsPage"
+             xmlns:vm="clr-namespace:MAUI_BarcodeScanner.ViewModels"
+             xmlns:model="clr-namespace:MAUI_BarcodeScanner.Models"
+             Title="{Binding Title}">
+    
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Clear All" Command="{Binding ClearAllItemsCommand}">
+
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
+    
+    <RefreshView x:DataType="vm:ItemsViewModel" Command="{Binding LoadItemsCommand}" IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
+        <CollectionView x:Name="ItemsListView"
+            ItemsSource="{Binding Items}"
+            SelectionMode="None">
+            <CollectionView.EmptyView>
+                <Label
+                Padding="0,40,0,40"
+                FontSize="Medium"
+                HorizontalTextAlignment="Center"
+                TextColor="Black"
+                >
+                    No items scanned yet.
+                </Label>
+            </CollectionView.EmptyView>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+
+                    <Grid x:DataType="model:Item" Padding="20">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <Label 
+                        Text="{Binding ProductName}" 
+                        LineBreakMode="TailTruncation" 
+                        Style="{DynamicResource ListItemTextStyle}" 
+                        FontSize="18"
+                        Grid.Column="0"
+                        FontAttributes="Bold"
+                        TextColor="Black"
+                    />
+
+                        <Label 
+                        Text="{Binding SKUId,StringFormat='SKU ID: {0}'}" 
+                        LineBreakMode="NoWrap"
+                        Style="{DynamicResource ListItemDetailTextStyle}"
+                        FontSize="13"
+                        Grid.Column="0"
+                        Grid.Row="1"
+                        TextColor="Black"
+                    />
+
+
+                        <Label 
+                        Text="{Binding Quantity, StringFormat='x {0}'}" 
+                        LineBreakMode="NoWrap"
+                        Style="{DynamicResource ListItemDetailTextStyle}"
+                        FontSize="23"
+                        Grid.Column="1"
+                        Grid.RowSpan="2"
+                        HorizontalTextAlignment="End"
+                        VerticalTextAlignment="Center"
+                        Margin="20,0,10,0"
+                        FontAttributes="Bold"
+                        TextColor="Black"
+                        
+                        
+                    />
+
+                        <Button 
+                        Text="Remove" 
+                        Grid.Column="3"
+                        Grid.RowSpan="2"
+                        FontSize="12"
+                        BackgroundColor="IndianRed"
+                        TextTransform="None"
+                        Command="{Binding Source={RelativeSource AncestorType={x:Type vm:ItemsViewModel}}, Path=ItemDeleteClicked}"
+                        CommandParameter="{Binding SKUId}"
+                    ></Button>
+                    </Grid>
+
+
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </RefreshView>
+</ContentPage>

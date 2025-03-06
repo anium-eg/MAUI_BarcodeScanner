@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35825.156 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MAUI_BarcodeScanner", "MAUI_BarcodeScanner\MAUI_BarcodeScanner.csproj", "{472A6410-CF6F-427F-968C-55F8D18B48CF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{472A6410-CF6F-427F-968C-55F8D18B48CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{472A6410-CF6F-427F-968C-55F8D18B48CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{472A6410-CF6F-427F-968C-55F8D18B48CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{472A6410-CF6F-427F-968C-55F8D18B48CF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1E3E0A62-674F-4A02-A8A7-87CB28EA9CA3}
+	EndGlobalSection
+EndGlobal
