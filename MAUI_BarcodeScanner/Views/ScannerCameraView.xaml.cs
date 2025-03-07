@@ -1,3 +1,4 @@
+
 using MAUI_BarcodeScanner.Models;
 using MAUI_BarcodeScanner.Services;
 
@@ -14,11 +15,8 @@ public partial class ScannerCameraView : ContentPage
 		InitializeComponent();
         barcodeReaderComponent.Options = new ZXing.Net.Maui.BarcodeReaderOptions
         {
-            Multiple = false,
             TryHarder = true,
-            TryInverted = true
-           
-
+            AutoRotate = true
         };
 
 

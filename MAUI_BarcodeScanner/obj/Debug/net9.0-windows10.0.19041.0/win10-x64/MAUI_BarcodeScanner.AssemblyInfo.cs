@@ -18,7 +18,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MAUI_BarcodeScanner")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+3fe9d875666ff9db7c71f8163d9fbc1397b5ddf8")]
 [assembly: System.Reflection.AssemblyProductAttribute("MAUI_BarcodeScanner")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MAUI_BarcodeScanner")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

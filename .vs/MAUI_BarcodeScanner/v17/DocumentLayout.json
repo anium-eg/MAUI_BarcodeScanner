@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\anium\\source\\repos\\MAUI_BarcodeScanner\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{472A6410-CF6F-427F-968C-55F8D18B48CF}|MAUI_BarcodeScanner\\MAUI_BarcodeScanner.csproj|c:\\users\\anium\\source\\repos\\maui_barcodescanner\\maui_barcodescanner\\platforms\\android\\mainactivity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{472A6410-CF6F-427F-968C-55F8D18B48CF}|MAUI_BarcodeScanner\\MAUI_BarcodeScanner.csproj|solutionrelative:maui_barcodescanner\\platforms\\android\\mainactivity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{472A6410-CF6F-427F-968C-55F8D18B48CF}|MAUI_BarcodeScanner\\MAUI_BarcodeScanner.csproj|c:\\users\\anium\\source\\repos\\maui_barcodescanner\\maui_barcodescanner\\views\\scannerpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{472A6410-CF6F-427F-968C-55F8D18B48CF}|MAUI_BarcodeScanner\\MAUI_BarcodeScanner.csproj|solutionrelative:maui_barcodescanner\\views\\scannerpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{472A6410-CF6F-427F-968C-55F8D18B48CF}|MAUI_BarcodeScanner\\MAUI_BarcodeScanner.csproj|c:\\users\\anium\\source\\repos\\maui_barcodescanner\\maui_barcodescanner\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -15,36 +15,56 @@
       "RelativeMoniker": "D:0:0:{472A6410-CF6F-427F-968C-55F8D18B48CF}|MAUI_BarcodeScanner\\MAUI_BarcodeScanner.csproj|solutionrelative:maui_barcodescanner\\appshell.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{472A6410-CF6F-427F-968C-55F8D18B48CF}|MAUI_BarcodeScanner\\MAUI_BarcodeScanner.csproj|c:\\users\\anium\\source\\repos\\maui_barcodescanner\\maui_barcodescanner\\views\\scannercameraview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{472A6410-CF6F-427F-968C-55F8D18B48CF}|MAUI_BarcodeScanner\\MAUI_BarcodeScanner.csproj|solutionrelative:maui_barcodescanner\\views\\scannercameraview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{472A6410-CF6F-427F-968C-55F8D18B48CF}|MAUI_BarcodeScanner\\MAUI_BarcodeScanner.csproj|c:\\users\\anium\\source\\repos\\maui_barcodescanner\\maui_barcodescanner\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{472A6410-CF6F-427F-968C-55F8D18B48CF}|MAUI_BarcodeScanner\\MAUI_BarcodeScanner.csproj|solutionrelative:maui_barcodescanner\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{472A6410-CF6F-427F-968C-55F8D18B48CF}|MAUI_BarcodeScanner\\MAUI_BarcodeScanner.csproj|c:\\users\\anium\\source\\repos\\maui_barcodescanner\\maui_barcodescanner\\views\\scannercameraview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{472A6410-CF6F-427F-968C-55F8D18B48CF}|MAUI_BarcodeScanner\\MAUI_BarcodeScanner.csproj|solutionrelative:maui_barcodescanner\\views\\scannercameraview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{472A6410-CF6F-427F-968C-55F8D18B48CF}|MAUI_BarcodeScanner\\MAUI_BarcodeScanner.csproj|c:\\users\\anium\\source\\repos\\maui_barcodescanner\\maui_barcodescanner\\views\\loginpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{472A6410-CF6F-427F-968C-55F8D18B48CF}|MAUI_BarcodeScanner\\MAUI_BarcodeScanner.csproj|solutionrelative:maui_barcodescanner\\views\\loginpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{472A6410-CF6F-427F-968C-55F8D18B48CF}|MAUI_BarcodeScanner\\MAUI_BarcodeScanner.csproj|c:\\users\\anium\\source\\repos\\maui_barcodescanner\\maui_barcodescanner\\views\\loginpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{472A6410-CF6F-427F-968C-55F8D18B48CF}|MAUI_BarcodeScanner\\MAUI_BarcodeScanner.csproj|solutionrelative:maui_barcodescanner\\views\\loginpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{472A6410-CF6F-427F-968C-55F8D18B48CF}|MAUI_BarcodeScanner\\MAUI_BarcodeScanner.csproj|c:\\users\\anium\\source\\repos\\maui_barcodescanner\\maui_barcodescanner\\views\\itemspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{472A6410-CF6F-427F-968C-55F8D18B48CF}|MAUI_BarcodeScanner\\MAUI_BarcodeScanner.csproj|solutionrelative:maui_barcodescanner\\views\\itemspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{472A6410-CF6F-427F-968C-55F8D18B48CF}|MAUI_BarcodeScanner\\MAUI_BarcodeScanner.csproj|c:\\users\\anium\\source\\repos\\maui_barcodescanner\\maui_barcodescanner\\views\\itemspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{472A6410-CF6F-427F-968C-55F8D18B48CF}|MAUI_BarcodeScanner\\MAUI_BarcodeScanner.csproj|solutionrelative:maui_barcodescanner\\views\\itemspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{472A6410-CF6F-427F-968C-55F8D18B48CF}|MAUI_BarcodeScanner\\MAUI_BarcodeScanner.csproj|c:\\users\\anium\\source\\repos\\maui_barcodescanner\\maui_barcodescanner\\views\\scannerpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{472A6410-CF6F-427F-968C-55F8D18B48CF}|MAUI_BarcodeScanner\\MAUI_BarcodeScanner.csproj|solutionrelative:maui_barcodescanner\\views\\scannerpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{472A6410-CF6F-427F-968C-55F8D18B48CF}|MAUI_BarcodeScanner\\MAUI_BarcodeScanner.csproj|c:\\users\\anium\\source\\repos\\maui_barcodescanner\\maui_barcodescanner\\viewmodels\\baseviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{472A6410-CF6F-427F-968C-55F8D18B48CF}|MAUI_BarcodeScanner\\MAUI_BarcodeScanner.csproj|solutionrelative:maui_barcodescanner\\viewmodels\\baseviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{472A6410-CF6F-427F-968C-55F8D18B48CF}|MAUI_BarcodeScanner\\MAUI_BarcodeScanner.csproj|c:\\users\\anium\\source\\repos\\maui_barcodescanner\\maui_barcodescanner\\platforms\\android\\mainactivity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{472A6410-CF6F-427F-968C-55F8D18B48CF}|MAUI_BarcodeScanner\\MAUI_BarcodeScanner.csproj|solutionrelative:maui_barcodescanner\\platforms\\android\\mainactivity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{472A6410-CF6F-427F-968C-55F8D18B48CF}|MAUI_BarcodeScanner\\MAUI_BarcodeScanner.csproj|c:\\users\\anium\\source\\repos\\maui_barcodescanner\\maui_barcodescanner\\viewmodels\\itemsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{472A6410-CF6F-427F-968C-55F8D18B48CF}|MAUI_BarcodeScanner\\MAUI_BarcodeScanner.csproj|solutionrelative:maui_barcodescanner\\viewmodels\\itemsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{472A6410-CF6F-427F-968C-55F8D18B48CF}|MAUI_BarcodeScanner\\MAUI_BarcodeScanner.csproj|c:\\users\\anium\\source\\repos\\maui_barcodescanner\\maui_barcodescanner\\viewmodels\\scannerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{472A6410-CF6F-427F-968C-55F8D18B48CF}|MAUI_BarcodeScanner\\MAUI_BarcodeScanner.csproj|solutionrelative:maui_barcodescanner\\viewmodels\\scannerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{472A6410-CF6F-427F-968C-55F8D18B48CF}|MAUI_BarcodeScanner\\MAUI_BarcodeScanner.csproj|c:\\users\\anium\\source\\repos\\maui_barcodescanner\\maui_barcodescanner\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{472A6410-CF6F-427F-968C-55F8D18B48CF}|MAUI_BarcodeScanner\\MAUI_BarcodeScanner.csproj|solutionrelative:maui_barcodescanner\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{472A6410-CF6F-427F-968C-55F8D18B48CF}|MAUI_BarcodeScanner\\MAUI_BarcodeScanner.csproj|c:\\users\\anium\\source\\repos\\maui_barcodescanner\\maui_barcodescanner\\viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{472A6410-CF6F-427F-968C-55F8D18B48CF}|MAUI_BarcodeScanner\\MAUI_BarcodeScanner.csproj|solutionrelative:maui_barcodescanner\\viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{472A6410-CF6F-427F-968C-55F8D18B48CF}|MAUI_BarcodeScanner\\MAUI_BarcodeScanner.csproj|c:\\users\\anium\\source\\repos\\maui_barcodescanner\\maui_barcodescanner\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{472A6410-CF6F-427F-968C-55F8D18B48CF}|MAUI_BarcodeScanner\\MAUI_BarcodeScanner.csproj|solutionrelative:maui_barcodescanner\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{472A6410-CF6F-427F-968C-55F8D18B48CF}|MAUI_BarcodeScanner\\MAUI_BarcodeScanner.csproj|c:\\users\\anium\\source\\repos\\maui_barcodescanner\\maui_barcodescanner\\views\\itemspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{472A6410-CF6F-427F-968C-55F8D18B48CF}|MAUI_BarcodeScanner\\MAUI_BarcodeScanner.csproj|solutionrelative:maui_barcodescanner\\views\\itemspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{472A6410-CF6F-427F-968C-55F8D18B48CF}|MAUI_BarcodeScanner\\MAUI_BarcodeScanner.csproj|c:\\users\\anium\\source\\repos\\maui_barcodescanner\\maui_barcodescanner\\views\\scannercameraview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{472A6410-CF6F-427F-968C-55F8D18B48CF}|MAUI_BarcodeScanner\\MAUI_BarcodeScanner.csproj|solutionrelative:maui_barcodescanner\\views\\scannercameraview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{472A6410-CF6F-427F-968C-55F8D18B48CF}|MAUI_BarcodeScanner\\MAUI_BarcodeScanner.csproj|c:\\users\\anium\\source\\repos\\maui_barcodescanner\\maui_barcodescanner\\views\\loginpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{472A6410-CF6F-427F-968C-55F8D18B48CF}|MAUI_BarcodeScanner\\MAUI_BarcodeScanner.csproj|solutionrelative:maui_barcodescanner\\views\\loginpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{472A6410-CF6F-427F-968C-55F8D18B48CF}|MAUI_BarcodeScanner\\MAUI_BarcodeScanner.csproj|c:\\users\\anium\\source\\repos\\maui_barcodescanner\\maui_barcodescanner\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{472A6410-CF6F-427F-968C-55F8D18B48CF}|MAUI_BarcodeScanner\\MAUI_BarcodeScanner.csproj|solutionrelative:maui_barcodescanner\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{472A6410-CF6F-427F-968C-55F8D18B48CF}|MAUI_BarcodeScanner\\MAUI_BarcodeScanner.csproj|c:\\users\\anium\\source\\repos\\maui_barcodescanner\\maui_barcodescanner\\resources\\styles\\colors.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -70,64 +90,77 @@
       "DocumentGroups": [
         {
           "DockedHeight": 279,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 0,
               "Title": "ScannerPage.xaml.cs",
               "DocumentMoniker": "C:\\Users\\anium\\source\\repos\\MAUI_BarcodeScanner\\MAUI_BarcodeScanner\\Views\\ScannerPage.xaml.cs",
               "RelativeDocumentMoniker": "MAUI_BarcodeScanner\\Views\\ScannerPage.xaml.cs",
               "ToolTip": "C:\\Users\\anium\\source\\repos\\MAUI_BarcodeScanner\\MAUI_BarcodeScanner\\Views\\ScannerPage.xaml.cs",
               "RelativeToolTip": "MAUI_BarcodeScanner\\Views\\ScannerPage.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAACAAAAAAAAAA==",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAwAYAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-05T07:24:58.44Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MainActivity.cs",
-              "DocumentMoniker": "C:\\Users\\anium\\source\\repos\\MAUI_BarcodeScanner\\MAUI_BarcodeScanner\\Platforms\\Android\\MainActivity.cs",
-              "RelativeDocumentMoniker": "MAUI_BarcodeScanner\\Platforms\\Android\\MainActivity.cs",
-              "ToolTip": "C:\\Users\\anium\\source\\repos\\MAUI_BarcodeScanner\\MAUI_BarcodeScanner\\Platforms\\Android\\MainActivity.cs",
-              "RelativeToolTip": "MAUI_BarcodeScanner\\Platforms\\Android\\MainActivity.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA1AQAAAAAAAA==",
+              "DocumentIndex": 7,
+              "Title": "BaseViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\anium\\source\\repos\\MAUI_BarcodeScanner\\MAUI_BarcodeScanner\\ViewModels\\BaseViewModel.cs",
+              "RelativeDocumentMoniker": "MAUI_BarcodeScanner\\ViewModels\\BaseViewModel.cs",
+              "ToolTip": "C:\\Users\\anium\\source\\repos\\MAUI_BarcodeScanner\\MAUI_BarcodeScanner\\ViewModels\\BaseViewModel.cs",
+              "RelativeToolTip": "MAUI_BarcodeScanner\\ViewModels\\BaseViewModel.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAzwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-06T05:59:54.832Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-07T06:46:46.433Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ItemsViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\anium\\source\\repos\\MAUI_BarcodeScanner\\MAUI_BarcodeScanner\\ViewModels\\ItemsViewModel.cs",
+              "RelativeDocumentMoniker": "MAUI_BarcodeScanner\\ViewModels\\ItemsViewModel.cs",
+              "ToolTip": "C:\\Users\\anium\\source\\repos\\MAUI_BarcodeScanner\\MAUI_BarcodeScanner\\ViewModels\\ItemsViewModel.cs",
+              "RelativeToolTip": "MAUI_BarcodeScanner\\ViewModels\\ItemsViewModel.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAwwCUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-07T06:46:50.287Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "LoginPage.xaml",
-              "DocumentMoniker": "C:\\Users\\anium\\source\\repos\\MAUI_BarcodeScanner\\MAUI_BarcodeScanner\\Views\\LoginPage.xaml",
-              "RelativeDocumentMoniker": "MAUI_BarcodeScanner\\Views\\LoginPage.xaml",
-              "ToolTip": "C:\\Users\\anium\\source\\repos\\MAUI_BarcodeScanner\\MAUI_BarcodeScanner\\Views\\LoginPage.xaml",
-              "RelativeToolTip": "MAUI_BarcodeScanner\\Views\\LoginPage.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-06T05:50:30.772Z",
-              "EditorCaption": ""
+              "Title": "LoginPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\anium\\source\\repos\\MAUI_BarcodeScanner\\MAUI_BarcodeScanner\\Views\\LoginPage.xaml.cs",
+              "RelativeDocumentMoniker": "MAUI_BarcodeScanner\\Views\\LoginPage.xaml.cs",
+              "ToolTip": "C:\\Users\\anium\\source\\repos\\MAUI_BarcodeScanner\\MAUI_BarcodeScanner\\Views\\LoginPage.xaml.cs",
+              "RelativeToolTip": "MAUI_BarcodeScanner\\Views\\LoginPage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-07T06:45:54.153Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 3,
               "Title": "App.xaml.cs",
               "DocumentMoniker": "C:\\Users\\anium\\source\\repos\\MAUI_BarcodeScanner\\MAUI_BarcodeScanner\\App.xaml.cs",
               "RelativeDocumentMoniker": "MAUI_BarcodeScanner\\App.xaml.cs",
               "ToolTip": "C:\\Users\\anium\\source\\repos\\MAUI_BarcodeScanner\\MAUI_BarcodeScanner\\App.xaml.cs",
               "RelativeToolTip": "MAUI_BarcodeScanner\\App.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA+AAAAAAAAAA==",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAQwAsAAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-06T05:37:42.412Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-06T05:37:42.412Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 16,
               "Title": "Colors.xaml",
               "DocumentMoniker": "C:\\Users\\anium\\source\\repos\\MAUI_BarcodeScanner\\MAUI_BarcodeScanner\\Resources\\Styles\\Colors.xaml",
               "RelativeDocumentMoniker": "MAUI_BarcodeScanner\\Resources\\Styles\\Colors.xaml",
@@ -135,18 +168,17 @@
               "RelativeToolTip": "MAUI_BarcodeScanner\\Resources\\Styles\\Colors.xaml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-06T05:35:15.262Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-06T05:35:15.262Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 17,
               "Title": "ScannerPage.xaml",
               "DocumentMoniker": "C:\\Users\\anium\\source\\repos\\MAUI_BarcodeScanner\\MAUI_BarcodeScanner\\Views\\ScannerPage.xaml",
               "RelativeDocumentMoniker": "MAUI_BarcodeScanner\\Views\\ScannerPage.xaml",
               "ToolTip": "C:\\Users\\anium\\source\\repos\\MAUI_BarcodeScanner\\MAUI_BarcodeScanner\\Views\\ScannerPage.xaml",
               "RelativeToolTip": "MAUI_BarcodeScanner\\Views\\ScannerPage.xaml",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAcAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAIBJwAcAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-03-05T11:39:58.695Z"
             },
@@ -158,14 +190,13 @@
               "RelativeDocumentMoniker": "MAUI_BarcodeScanner\\MauiProgram.cs",
               "ToolTip": "C:\\Users\\anium\\source\\repos\\MAUI_BarcodeScanner\\MAUI_BarcodeScanner\\MauiProgram.cs",
               "RelativeToolTip": "MAUI_BarcodeScanner\\MauiProgram.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-05T11:37:06.635Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-05T11:37:06.635Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 18,
               "Title": "Inventory.cs",
               "DocumentMoniker": "C:\\Users\\anium\\source\\repos\\MAUI_BarcodeScanner\\MAUI_BarcodeScanner\\Services\\Inventory.cs",
               "RelativeDocumentMoniker": "MAUI_BarcodeScanner\\Services\\Inventory.cs",
@@ -177,16 +208,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "ScannerViewModel.cs",
               "DocumentMoniker": "C:\\Users\\anium\\source\\repos\\MAUI_BarcodeScanner\\MAUI_BarcodeScanner\\ViewModels\\ScannerViewModel.cs",
               "RelativeDocumentMoniker": "MAUI_BarcodeScanner\\ViewModels\\ScannerViewModel.cs",
               "ToolTip": "C:\\Users\\anium\\source\\repos\\MAUI_BarcodeScanner\\MAUI_BarcodeScanner\\ViewModels\\ScannerViewModel.cs",
               "RelativeToolTip": "MAUI_BarcodeScanner\\ViewModels\\ScannerViewModel.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAQwC4AAAATAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-05T08:41:13.566Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-05T08:41:13.566Z"
             },
             {
               "$type": "Document",
@@ -196,62 +226,21 @@
               "RelativeDocumentMoniker": "MAUI_BarcodeScanner\\Views\\ScannerCameraView.xaml.cs",
               "ToolTip": "C:\\Users\\anium\\source\\repos\\MAUI_BarcodeScanner\\MAUI_BarcodeScanner\\Views\\ScannerCameraView.xaml.cs",
               "RelativeToolTip": "MAUI_BarcodeScanner\\Views\\ScannerCameraView.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADIAAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAYwBEAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-05T08:34:09.856Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ScannerCameraView.xaml",
-              "DocumentMoniker": "C:\\Users\\anium\\source\\repos\\MAUI_BarcodeScanner\\MAUI_BarcodeScanner\\Views\\ScannerCameraView.xaml",
-              "RelativeDocumentMoniker": "MAUI_BarcodeScanner\\Views\\ScannerCameraView.xaml",
-              "ToolTip": "C:\\Users\\anium\\source\\repos\\MAUI_BarcodeScanner\\MAUI_BarcodeScanner\\Views\\ScannerCameraView.xaml",
-              "RelativeToolTip": "MAUI_BarcodeScanner\\Views\\ScannerCameraView.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-05T08:33:00.03Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "App.xaml",
-              "DocumentMoniker": "C:\\Users\\anium\\source\\repos\\MAUI_BarcodeScanner\\MAUI_BarcodeScanner\\App.xaml",
-              "RelativeDocumentMoniker": "MAUI_BarcodeScanner\\App.xaml",
-              "ToolTip": "C:\\Users\\anium\\source\\repos\\MAUI_BarcodeScanner\\MAUI_BarcodeScanner\\App.xaml",
-              "RelativeToolTip": "MAUI_BarcodeScanner\\App.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-05T07:19:15.672Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "AppShell.xaml",
-              "DocumentMoniker": "C:\\Users\\anium\\source\\repos\\MAUI_BarcodeScanner\\MAUI_BarcodeScanner\\AppShell.xaml",
-              "RelativeDocumentMoniker": "MAUI_BarcodeScanner\\AppShell.xaml",
-              "ToolTip": "C:\\Users\\anium\\source\\repos\\MAUI_BarcodeScanner\\MAUI_BarcodeScanner\\AppShell.xaml",
-              "RelativeToolTip": "MAUI_BarcodeScanner\\AppShell.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-05T07:14:35.428Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-05T08:34:09.856Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "ItemsPage.xaml",
-              "DocumentMoniker": "C:\\Users\\anium\\source\\repos\\MAUI_BarcodeScanner\\MAUI_BarcodeScanner\\Views\\ItemsPage.xaml",
-              "RelativeDocumentMoniker": "MAUI_BarcodeScanner\\Views\\ItemsPage.xaml",
-              "ToolTip": "C:\\Users\\anium\\source\\repos\\MAUI_BarcodeScanner\\MAUI_BarcodeScanner\\Views\\ItemsPage.xaml",
-              "RelativeToolTip": "MAUI_BarcodeScanner\\Views\\ItemsPage.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-05T07:35:52.07Z",
-              "EditorCaption": ""
+              "Title": "ItemsPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\anium\\source\\repos\\MAUI_BarcodeScanner\\MAUI_BarcodeScanner\\Views\\ItemsPage.xaml.cs",
+              "RelativeDocumentMoniker": "MAUI_BarcodeScanner\\Views\\ItemsPage.xaml.cs",
+              "ToolTip": "C:\\Users\\anium\\source\\repos\\MAUI_BarcodeScanner\\MAUI_BarcodeScanner\\Views\\ItemsPage.xaml.cs",
+              "RelativeToolTip": "MAUI_BarcodeScanner\\Views\\ItemsPage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-07T06:24:32.349Z"
             },
             {
               "$type": "Document",
@@ -261,10 +250,93 @@
               "RelativeDocumentMoniker": "MAUI_BarcodeScanner\\AppShell.xaml.cs",
               "ToolTip": "C:\\Users\\anium\\source\\repos\\MAUI_BarcodeScanner\\MAUI_BarcodeScanner\\AppShell.xaml.cs",
               "RelativeToolTip": "MAUI_BarcodeScanner\\AppShell.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-06T05:40:15.31Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-06T05:40:15.31Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "LoginPage.xaml",
+              "DocumentMoniker": "C:\\Users\\anium\\source\\repos\\MAUI_BarcodeScanner\\MAUI_BarcodeScanner\\Views\\LoginPage.xaml",
+              "RelativeDocumentMoniker": "MAUI_BarcodeScanner\\Views\\LoginPage.xaml",
+              "ToolTip": "C:\\Users\\anium\\source\\repos\\MAUI_BarcodeScanner\\MAUI_BarcodeScanner\\Views\\LoginPage.xaml",
+              "RelativeToolTip": "MAUI_BarcodeScanner\\Views\\LoginPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-06T05:50:30.772Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "LoginViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\anium\\source\\repos\\MAUI_BarcodeScanner\\MAUI_BarcodeScanner\\ViewModels\\LoginViewModel.cs",
+              "RelativeDocumentMoniker": "MAUI_BarcodeScanner\\ViewModels\\LoginViewModel.cs",
+              "ToolTip": "C:\\Users\\anium\\source\\repos\\MAUI_BarcodeScanner\\MAUI_BarcodeScanner\\ViewModels\\LoginViewModel.cs",
+              "RelativeToolTip": "MAUI_BarcodeScanner\\ViewModels\\LoginViewModel.cs",
+              "ViewState": "AgIAAGcAAAAAAAAAAAAUwHYAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-06T12:32:12.762Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "MainActivity.cs",
+              "DocumentMoniker": "C:\\Users\\anium\\source\\repos\\MAUI_BarcodeScanner\\MAUI_BarcodeScanner\\Platforms\\Android\\MainActivity.cs",
+              "RelativeDocumentMoniker": "MAUI_BarcodeScanner\\Platforms\\Android\\MainActivity.cs",
+              "ToolTip": "C:\\Users\\anium\\source\\repos\\MAUI_BarcodeScanner\\MAUI_BarcodeScanner\\Platforms\\Android\\MainActivity.cs",
+              "RelativeToolTip": "MAUI_BarcodeScanner\\Platforms\\Android\\MainActivity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA1AQAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-06T05:59:54.832Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ScannerCameraView.xaml",
+              "DocumentMoniker": "C:\\Users\\anium\\source\\repos\\MAUI_BarcodeScanner\\MAUI_BarcodeScanner\\Views\\ScannerCameraView.xaml",
+              "RelativeDocumentMoniker": "MAUI_BarcodeScanner\\Views\\ScannerCameraView.xaml",
+              "ToolTip": "C:\\Users\\anium\\source\\repos\\MAUI_BarcodeScanner\\MAUI_BarcodeScanner\\Views\\ScannerCameraView.xaml",
+              "RelativeToolTip": "MAUI_BarcodeScanner\\Views\\ScannerCameraView.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-05T08:33:00.03Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ItemsPage.xaml",
+              "DocumentMoniker": "C:\\Users\\anium\\source\\repos\\MAUI_BarcodeScanner\\MAUI_BarcodeScanner\\Views\\ItemsPage.xaml",
+              "RelativeDocumentMoniker": "MAUI_BarcodeScanner\\Views\\ItemsPage.xaml",
+              "ToolTip": "C:\\Users\\anium\\source\\repos\\MAUI_BarcodeScanner\\MAUI_BarcodeScanner\\Views\\ItemsPage.xaml",
+              "RelativeToolTip": "MAUI_BarcodeScanner\\Views\\ItemsPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-05T07:35:52.07Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Users\\anium\\source\\repos\\MAUI_BarcodeScanner\\MAUI_BarcodeScanner\\App.xaml",
+              "RelativeDocumentMoniker": "MAUI_BarcodeScanner\\App.xaml",
+              "ToolTip": "C:\\Users\\anium\\source\\repos\\MAUI_BarcodeScanner\\MAUI_BarcodeScanner\\App.xaml",
+              "RelativeToolTip": "MAUI_BarcodeScanner\\App.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-05T07:19:15.672Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "AppShell.xaml",
+              "DocumentMoniker": "C:\\Users\\anium\\source\\repos\\MAUI_BarcodeScanner\\MAUI_BarcodeScanner\\AppShell.xaml",
+              "RelativeDocumentMoniker": "MAUI_BarcodeScanner\\AppShell.xaml",
+              "ToolTip": "C:\\Users\\anium\\source\\repos\\MAUI_BarcodeScanner\\MAUI_BarcodeScanner\\AppShell.xaml",
+              "RelativeToolTip": "MAUI_BarcodeScanner\\AppShell.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-05T07:14:35.428Z"
             }
           ]
         }

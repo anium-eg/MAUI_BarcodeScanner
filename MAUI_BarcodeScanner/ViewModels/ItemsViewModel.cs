@@ -25,38 +25,11 @@ namespace MAUI_BarcodeScanner.ViewModels
             Title = "Cart";
             Items = new ObservableCollection<Item>();
 
-            Items.Add(
-                new Item
-                {
-                    ProductName = "HEllo",
-                    SKUId = "12244"
-                }
-
-            );
-            Items.Add(
-    new Item
-    {
-        ProductName = "HEllo",
-        SKUId = "12244"
-    }
-
-);
-            Items.Add(
-    new Item
-    {
-        ProductName = "HEllo",
-        SKUId = "12244"
-    }
-
-);
-
-
-            LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
-
             inventory = DependencyService.Get<IDataStore<Item>>();
 
             ItemDeleteClicked = new Command<string>(OnItemDelete);
             ClearAllItemsCommand = new Command(ClearAllItems);
+            LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
         }
 
         async Task ExecuteLoadItemsCommand()
@@ -88,7 +61,6 @@ namespace MAUI_BarcodeScanner.ViewModels
         }
 
 
-  
         async void OnItemDelete(string id)
         {
             await inventory.DeleteItemAsync(id);

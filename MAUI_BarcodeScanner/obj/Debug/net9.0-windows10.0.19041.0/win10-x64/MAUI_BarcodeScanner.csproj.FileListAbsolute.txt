@@ -479,9 +479,6 @@ C:\Users\anium\source\repos\MAUI_BarcodeScanner\MAUI_BarcodeScanner\bin\Debug\ne
 C:\Users\anium\source\repos\MAUI_BarcodeScanner\MAUI_BarcodeScanner\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\scanner_small.scale-100.png
 C:\Users\anium\source\repos\MAUI_BarcodeScanner\MAUI_BarcodeScanner\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\cart_icon.scale-100.png
 C:\Users\anium\source\repos\MAUI_BarcodeScanner\MAUI_BarcodeScanner\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\scanner.scale-100.png
-C:\Users\anium\source\repos\MAUI_BarcodeScanner\MAUI_BarcodeScanner\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Microsoft.Maui.Controls.HotReload.Forms.dll
-C:\Users\anium\source\repos\MAUI_BarcodeScanner\MAUI_BarcodeScanner\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Microsoft.VisualStudio.DesignTools.MobileTapContracts.dll
-C:\Users\anium\source\repos\MAUI_BarcodeScanner\MAUI_BarcodeScanner\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Microsoft.VisualStudio.DesignTools.TapContract.dll
 C:\Users\anium\source\repos\MAUI_BarcodeScanner\MAUI_BarcodeScanner\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\xamarin_logo.scale-100.png
 C:\Users\anium\source\repos\MAUI_BarcodeScanner\MAUI_BarcodeScanner\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\icon_feed.scale-100.png
 C:\Users\anium\source\repos\MAUI_BarcodeScanner\MAUI_BarcodeScanner\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\icon_about.scale-100.png
