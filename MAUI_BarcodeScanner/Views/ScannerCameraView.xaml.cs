@@ -11,8 +11,8 @@ public partial class ScannerCameraView : ContentPage
 
     private bool hasFiredAlready = false;
     public ScannerCameraView()
-	{
-		InitializeComponent();
+    {
+        InitializeComponent();
         barcodeReaderComponent.Options = new ZXing.Net.Maui.BarcodeReaderOptions
         {
             TryHarder = true,
@@ -23,7 +23,7 @@ public partial class ScannerCameraView : ContentPage
 
         inventory = DependencyService.Get<Inventory>();
         dataStore = DependencyService.Get<IDataStore<Item>>();
-	}
+    }
 
     private async void CameraBarcodeReaderView_BarcodesDetected(object sender, ZXing.Net.Maui.BarcodeDetectionEventArgs e)
     {
@@ -53,7 +53,7 @@ public partial class ScannerCameraView : ContentPage
                 }
                 else
                 {
-                    await Application.Current.MainPage.DisplayAlert("Invalid Item!", "Please scan a valid item.", "Ok");
+                    await Application.Current.MainPage.DisplayAlert("Invalid Item!", $"Item with SKU Id:{result.Value} is not in the inventory.", "Ok");
                 }
             });
 
@@ -76,6 +76,6 @@ public partial class ScannerCameraView : ContentPage
         base.OnAppearing();
         barcodeReaderComponent.BarcodesDetected += CameraBarcodeReaderView_BarcodesDetected;
     }
-
-
 }
+
+

@@ -485,3 +485,4 @@ C:\Users\anium\source\repos\MAUI_BarcodeScanner\MAUI_BarcodeScanner\obj\Debug\ne
 C:\Users\anium\source\repos\MAUI_BarcodeScanner\MAUI_BarcodeScanner\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\scanner_small.scale-100.png
 C:\Users\anium\source\repos\MAUI_BarcodeScanner\MAUI_BarcodeScanner\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\cart_icon.scale-100.png
 C:\Users\anium\source\repos\MAUI_BarcodeScanner\MAUI_BarcodeScanner\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\scanner.scale-100.png
+C:\Users\anium\source\repos\MAUI_BarcodeScanner\MAUI_BarcodeScanner\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\MAUI_BarcodeScanner.sourcelink.json

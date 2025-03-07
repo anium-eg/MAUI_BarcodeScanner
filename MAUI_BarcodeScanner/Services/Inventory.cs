@@ -14,7 +14,7 @@ namespace MAUI_BarcodeScanner.Services
             new InventoryItem { SKUId = "8906004863080", ProductName = "Origami Tissues" },
             new InventoryItem { SKUId = "4987176191359", ProductName = "Vicks Inhaler" },
             new InventoryItem { SKUId = "194632852486", ProductName = "Lenovo Backpack" },
-            new InventoryItem { SKUId = "KDRMUQFL", ProductName = "Cycling Jersey" },
+            new InventoryItem { SKUId = "1234567890129", ProductName = "Cycling Jersey" },
             new InventoryItem { SKUId = "N7HGPIIE", ProductName = "Bike Lock" },
             new InventoryItem { SKUId = "U3NQ9QA7", ProductName = "Chain Lubricant" },
             new InventoryItem { SKUId = "2JF3DS76", ProductName = "Helmet" },

@@ -969,3 +969,4 @@ C:\Users\anium\source\repos\MAUI_BarcodeScanner\MAUI_BarcodeScanner\obj\Debug\ne
 C:\Users\anium\source\repos\MAUI_BarcodeScanner\MAUI_BarcodeScanner\obj\Debug\net9.0-android\android\marshal_methods.arm64-v8a.o
 C:\Users\anium\source\repos\MAUI_BarcodeScanner\MAUI_BarcodeScanner\obj\Debug\net9.0-android\android\jni_remap.arm64-v8a.o
 C:\Users\anium\source\repos\MAUI_BarcodeScanner\MAUI_BarcodeScanner\obj\Debug\net9.0-android\app_shared_libraries\arm64-v8a\libxamarin-app.so
+C:\Users\anium\source\repos\MAUI_BarcodeScanner\MAUI_BarcodeScanner\obj\Debug\net9.0-android\MAUI_BarcodeScanner.sourcelink.json
