@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUI_BarcodeScanner.Views.LoginPage"
+             xmlns:vm="clr-namespace:MAUI_BarcodeScanner.ViewModels"
+             Title="Login Page">
+    <ContentPage.Content>
+        <Grid>
+
+            <StackLayout Padding="50,0,50,0">
+
+                <Image Source="cart_icon" HeightRequest="70" Margin="0,100,0,0"></Image>
+                <Label Text="EG Mobile POS" TextColor="Black" FontSize="30" HorizontalTextAlignment="Center" FontAttributes="Bold"  Margin="0,0,0,90"/>
+
+
+                <Entry Placeholder="Cashier Id" Text="{Binding CashierId}" TextColor="Black" PlaceholderColor="Gray" Visual="Material" />
+
+                <Entry Placeholder="Password" IsPassword="True" Text="{Binding Password}" TextColor="Black" PlaceholderColor="Gray" Visual="Material"/>
+
+
+                <Label Text="{Binding InvalidText}" FontAttributes="Bold" TextColor="IndianRed" IsVisible="{Binding ShowInvalidText}"></Label>
+
+                <Button VerticalOptions="Center" Text="Login" Command="{Binding LoginCommand}" Margin="0,20,0,0"/>
+
+            </StackLayout>
+            
+            <Grid x:Name="LoadingOverlay"
+                  BackgroundColor="Black"
+                  Opacity="0.5"
+                  IsVisible="{Binding IsLoading}"
+                  InputTransparent="False"
+                  >
+                <Grid.GestureRecognizers>
+                    <!-- empty tap gesture recognizer to block input -->
+                    <TapGestureRecognizer />
+                </Grid.GestureRecognizers>
+                
+                <ActivityIndicator IsRunning="True"
+                           VerticalOptions="Center"
+                           HorizontalOptions="Center" />
+            </Grid>
+
+        </Grid>
+
+    </ContentPage.Content>
+</ContentPage>
