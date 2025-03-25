@@ -32,9 +32,6 @@ public static class MauiProgram
 
 		builder.Services.AddTransient<ItemsViewModel>();
 		builder.Services.AddTransient<ScannerCameraViewModel>();
-
-
-		builder.Logging.AddDebug();
 	
 
 		#if DEBUG

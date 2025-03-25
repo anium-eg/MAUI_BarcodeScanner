@@ -21,23 +21,22 @@ namespace MAUI_BarcodeScanner.ViewModels
 
             if (isLoggedIn)
                 Shell.Current.GoToAsync($"//{nameof(ScannerPage)}");
-
         }
 
         [ObservableProperty]
-        public string cashierId = "";
+        public string cashierId;
 
         [ObservableProperty]
-        public string password = "";
-
-        [ObservableProperty]
-        private bool showInvalidText;
+        public string password;
 
         [ObservableProperty]
         private string invalidText;
 
         [ObservableProperty]
-        private bool isLoading = false;
+        private bool showInvalidText;
+
+        [ObservableProperty]
+        private bool isLoading;
 
         [RelayCommand]
         private async Task Login()

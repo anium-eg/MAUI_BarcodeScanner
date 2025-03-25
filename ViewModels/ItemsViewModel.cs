@@ -26,19 +26,11 @@ namespace MAUI_BarcodeScanner.ViewModels
         public ItemsViewModel(Datastore _datastore)
         {
             mockDatastore = _datastore;
-            //Items = mockDatastore.GetItemsAsync().Result;
         }
 
-        //async Task ExecuteLoadItemsCommand()
-        //{
-        //    IsBusy = true;
-        //    IEnumerable<Item> scannedItems = await mockDatastore.GetItemsAsync();
-        //    //Items = scannedItems.ToObservableCollection<Item>();
-        //    IsBusy = false;
-        //}
 
         [RelayCommand]
-        public async Task OnItemDelete(string id)
+        public async Task DeleteItem(string id)
         {
             await MockDatastore.DeleteItemAsync(id);
             Items.Remove(Items.First(item => item.SKUId == id));
@@ -54,7 +46,6 @@ namespace MAUI_BarcodeScanner.ViewModels
         [RelayCommand]
         async Task RefreshList()
         {
-            Debug.WriteLine("Refreshed this list-----------");
             IsBusy = true;
             IEnumerable<Item> scannedItems = await MockDatastore.GetItemsAsync();
             Items.Clear();
@@ -63,26 +54,5 @@ namespace MAUI_BarcodeScanner.ViewModels
         }
 
 
-        //[RelayCommand]
-        //public async Task Appearing()
-        //{
-        //    Debug.WriteLine("-----------------------------------Executing on appear");
-        //    IsBusy = true;
-        //    IEnumerable<Item> scannedItems = await mockDatastore.GetItemsAsync();
-        //    Debug.WriteLine("HERE HERE HRER H------"+scannedItems.First().Quantity);
-        //    Items.Clear();
-        //    Items.AddRange(scannedItems);
-        //    Debug.WriteLine("In the itme"+Items.First().Quantity);
-        //    IsBusy = false;
-        //}
-
-        //[RelayCommand]
-        //public async Task LoadItems()
-        //{
-            
-        //    Debug.WriteLine("Items are loading -----------------");
-        //    await Appearing();
-        //    return;
-        //}
     }
 }

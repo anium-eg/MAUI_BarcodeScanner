@@ -16,7 +16,6 @@
         <ToolbarItem Text="Clear All" Command="{Binding ClearAllItemsCommand}"/>
     </ContentPage.ToolbarItems>
     
-
     <RefreshView x:DataType="vm:ItemsViewModel" Command="{Binding RefreshListCommand}" IsRefreshing="{Binding IsBusy}">
         <CollectionView x:Name="ItemsListView"
             ItemsSource="{Binding Items}"
@@ -31,6 +30,7 @@
                     No items scanned yet.
                 </Label>
             </CollectionView.EmptyView>
+            
             <CollectionView.ItemTemplate>
                 <DataTemplate>
 
@@ -65,7 +65,6 @@
                         TextColor="Black"
                         />
 
-
                         <Label 
                         Text="{Binding Quantity, StringFormat='x {0}'}" 
                         LineBreakMode="NoWrap"
@@ -87,12 +86,10 @@
                         FontSize="12"
                         BackgroundColor="IndianRed"
                         TextTransform="None"
-                        Command="{Binding Source={RelativeSource AncestorType={x:Type vm:ItemsViewModel}}, Path=ItemDeleteClicked}"
+                        Command="{Binding Source={RelativeSource AncestorType={x:Type vm:ItemsViewModel}}, Path=DeleteItemCommand}"
                         CommandParameter="{Binding SKUId}"
                     ></Button>
                     </Grid>
-
-
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>

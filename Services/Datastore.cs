@@ -29,7 +29,7 @@ namespace MAUI_BarcodeScanner.Services
 
         public async Task<bool> UpdateItemAsync(Item item)
         {
-            var oldItem = items.Where((Item arg) => arg.SKUId == item.SKUId).FirstOrDefault();
+            var oldItem = items.First((Item arg) => arg.SKUId == item.SKUId);
             items.Remove(oldItem);
             items.Add(item);
 
@@ -38,7 +38,7 @@ namespace MAUI_BarcodeScanner.Services
 
         public async Task<bool> DeleteItemAsync(string id)
         {
-            var oldItem = items.Where((Item arg) => arg.SKUId == id).FirstOrDefault();
+            var oldItem = items.First((Item item) => item.SKUId == id);
             items.Remove(oldItem);
 
             return await Task.FromResult(true);
@@ -46,7 +46,7 @@ namespace MAUI_BarcodeScanner.Services
 
         public async Task<Item> GetItemAsync(string id)
         {
-            return await Task.FromResult(items.First(s => s.SKUId == id));
+            return await Task.FromResult(items.First(item => item.SKUId == id));
         }
 
         public async Task<IEnumerable<Item>> GetItemsAsync(bool forceRefresh = false)

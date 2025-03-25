@@ -5,9 +5,19 @@ namespace MAUI_BarcodeScanner.Views;
 
 public partial class ItemsPage : ContentPage
 {
-    public ItemsPage(ItemsViewModel viewModel)
+    readonly ItemsViewModel viewModel;
+    
+    public ItemsPage(ItemsViewModel _viewModel)
 	{
 		InitializeComponent();
-		BindingContext = viewModel;
+		BindingContext = _viewModel;
+        viewModel = _viewModel;
 	}
+
+    protected override void OnAppearing()
+    {
+        viewModel.RefreshListCommand.Execute(null);
+        base.OnAppearing();
+    }
+
 }

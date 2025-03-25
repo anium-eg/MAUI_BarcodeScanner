@@ -6,9 +6,9 @@
              xmlns:vm="clr-namespace:MAUI_BarcodeScanner.ViewModels"
              x:DataType="vm:ScannerCameraViewModel"
              Title="Barcode Scanner">
-
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Stop" Command="{Binding GoBackCommand}"/>
+    </ContentPage.ToolbarItems>
     <scanner:CameraView OnDetectionFinishedCommand="{Binding BarcodeDetectedCommand}" CameraFacing="Back" CameraEnabled="True" />
-
-
 
 </ContentPage>
