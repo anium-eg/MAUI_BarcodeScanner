@@ -5,20 +5,18 @@ using MAUI_BarcodeScanner.Models;
 
 namespace MAUI_BarcodeScanner.Services
 {
-    public class MockDataStore : IDataStore<Item>
+    public class Datastore
     {
-        
 
         readonly ObservableCollection<Item> items;
-        public MockDataStore()
+        public Datastore()
         {
             items = new ObservableCollection<Item>();
         }
 
         public async Task<bool> AddItemAsync(Item item)
         {
-
-            Item currentItem = items.FirstOrDefault(itemInStore => itemInStore.SKUId == item.SKUId);
+            Item? currentItem = items.FirstOrDefault(itemInStore => itemInStore.SKUId == item.SKUId);
 
             if (currentItem != null)
                 currentItem.Quantity += 1;
@@ -48,7 +46,7 @@ namespace MAUI_BarcodeScanner.Services
 
         public async Task<Item> GetItemAsync(string id)
         {
-            return await Task.FromResult(items.FirstOrDefault(s => s.SKUId == id));
+            return await Task.FromResult(items.First(s => s.SKUId == id));
         }
 
         public async Task<IEnumerable<Item>> GetItemsAsync(bool forceRefresh = false)

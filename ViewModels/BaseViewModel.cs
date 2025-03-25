@@ -8,7 +8,7 @@ namespace MAUI_BarcodeScanner.ViewModels
 {
     public class BaseViewModel : INotifyPropertyChanged
     {
-        public IDataStore<Item> DataStore => DependencyService.Get<IDataStore<Item>>();
+        public Datastore DataStore => DependencyService.Get<Datastore>();
 
         bool isBusy = false;
         public bool IsBusy

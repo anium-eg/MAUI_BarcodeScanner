@@ -1,4 +1,7 @@
-﻿using MAUI_BarcodeScanner.Services;
+﻿using BarcodeScanning;
+using CommunityToolkit.Maui;
+using MAUI_BarcodeScanner.Services;
+using MAUI_BarcodeScanner.ViewModels;
 using MAUI_BarcodeScanner.Views;
 using Microsoft.Extensions.Logging;
 using ZXing.Net.Maui.Controls;
@@ -12,17 +15,27 @@ public static class MauiProgram
 		var builder = MauiApp.CreateBuilder();
 
 		builder
-			.UseMauiApp<App>()
-			.UseBarcodeReader()
+			.UseMauiApp<App>().UseBarcodeScanning()
+            .UseMauiCommunityToolkit()
+
 			.ConfigureFonts(fonts =>
 			{
 				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
 			});
+			
     
 
-		DependencyService.Register<MockDataStore>();
-		DependencyService.Register<Inventory>();
+
+		builder.Services.AddSingleton<Datastore>();
+		builder.Services.AddSingleton<Inventory>();
+
+		builder.Services.AddTransient<ItemsViewModel>();
+		builder.Services.AddTransient<ScannerCameraViewModel>();
+
+
+		builder.Logging.AddDebug();
+	
 
 		#if DEBUG
 			builder.Logging.AddDebug();

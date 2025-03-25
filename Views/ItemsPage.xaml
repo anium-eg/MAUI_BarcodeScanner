@@ -4,15 +4,20 @@
              x:Class="MAUI_BarcodeScanner.Views.ItemsPage"
              xmlns:vm="clr-namespace:MAUI_BarcodeScanner.ViewModels"
              xmlns:model="clr-namespace:MAUI_BarcodeScanner.Models"
-             Title="{Binding Title}">
+             x:DataType="vm:ItemsViewModel"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             Title="Cart View">
+
+    <ContentPage.Behaviors>
+        <toolkit:EventToCommandBehavior Command="{Binding RefreshListCommand}" EventName="Appearing" />
+    </ContentPage.Behaviors>
     
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Clear All" Command="{Binding ClearAllItemsCommand}">
-
-        </ToolbarItem>
+        <ToolbarItem Text="Clear All" Command="{Binding ClearAllItemsCommand}"/>
     </ContentPage.ToolbarItems>
     
-    <RefreshView x:DataType="vm:ItemsViewModel" Command="{Binding LoadItemsCommand}" IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
+
+    <RefreshView x:DataType="vm:ItemsViewModel" Command="{Binding RefreshListCommand}" IsRefreshing="{Binding IsBusy}">
         <CollectionView x:Name="ItemsListView"
             ItemsSource="{Binding Items}"
             SelectionMode="None">
@@ -48,7 +53,7 @@
                         Grid.Column="0"
                         FontAttributes="Bold"
                         TextColor="Black"
-                    />
+                        />
 
                         <Label 
                         Text="{Binding SKUId,StringFormat='SKU ID: {0}'}" 
@@ -58,7 +63,7 @@
                         Grid.Column="0"
                         Grid.Row="1"
                         TextColor="Black"
-                    />
+                        />
 
 
                         <Label 
@@ -73,9 +78,7 @@
                         Margin="20,0,10,0"
                         FontAttributes="Bold"
                         TextColor="Black"
-                        
-                        
-                    />
+                        />
 
                         <Button 
                         Text="Remove" 

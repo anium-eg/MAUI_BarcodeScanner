@@ -1,76 +1,88 @@
 ﻿
 using System.Collections.ObjectModel;
 using System.Diagnostics;
+using CommunityToolkit.Maui.Core.Extensions;
+using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
 using MAUI_BarcodeScanner.Models;
 using MAUI_BarcodeScanner.Services;
+using Microsoft.Extensions.Logging;
+using MvvmHelpers;
 
 
 namespace MAUI_BarcodeScanner.ViewModels
 {
-    public class ItemsViewModel : BaseViewModel
+    public partial class ItemsViewModel : ObservableObject
     {
-        private Item _selectedItem;
 
-        public ObservableCollection<Item> Items { get; }
-        public Command LoadItemsCommand { get; }
-        public Command AddItemCommand { get;  }
-        public Command<Item> ItemTapped { get; }
-        public Command<string> ItemDeleteClicked { get; }
-        public Command ClearAllItemsCommand { get; }
+        public ObservableRangeCollection<Item> Items { get; set; } = new();
 
-        readonly IDataStore<Item> inventory;
+        [ObservableProperty]
+        private Datastore mockDatastore;
 
-        public ItemsViewModel()
+        [ObservableProperty]
+        public bool isBusy = false;
+
+        public ItemsViewModel(Datastore _datastore)
         {
-            Title = "Cart";
-            Items = new ObservableCollection<Item>();
-
-            inventory = DependencyService.Get<IDataStore<Item>>();
-
-            ItemDeleteClicked = new Command<string>(OnItemDelete);
-            ClearAllItemsCommand = new Command(ClearAllItems);
-            LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
+            mockDatastore = _datastore;
+            //Items = mockDatastore.GetItemsAsync().Result;
         }
 
-        async Task ExecuteLoadItemsCommand()
-        {
-            IsBusy = true;
+        //async Task ExecuteLoadItemsCommand()
+        //{
+        //    IsBusy = true;
+        //    IEnumerable<Item> scannedItems = await mockDatastore.GetItemsAsync();
+        //    //Items = scannedItems.ToObservableCollection<Item>();
+        //    IsBusy = false;
+        //}
 
-            try
-            {
-                Items.Clear();
-                var items = await DataStore.GetItemsAsync(true);
-                foreach (var item in items)
-                {
-                    Items.Add(item);
-                }
-            }
-            catch (Exception ex)
-            {
-                Debug.WriteLine(ex);
-            }
-            finally
-            {
-                IsBusy = false;
-            }
+        [RelayCommand]
+        public async Task OnItemDelete(string id)
+        {
+            await MockDatastore.DeleteItemAsync(id);
+            Items.Remove(Items.First(item => item.SKUId == id));
         }
 
-        public void OnAppearing()
+        [RelayCommand]
+        public async Task ClearAllItems()
         {
-            IsBusy = true;
-        }
-
-
-        async void OnItemDelete(string id)
-        {
-            await inventory.DeleteItemAsync(id);
-            Items.Remove(Items.FirstOrDefault(item => item.SKUId == id));
-        }
-
-        async void ClearAllItems()
-        {
-            await inventory.ClearAllAsync();
+            await MockDatastore.ClearAllAsync();
             Items.Clear();
         }
+
+        [RelayCommand]
+        async Task RefreshList()
+        {
+            Debug.WriteLine("Refreshed this list-----------");
+            IsBusy = true;
+            IEnumerable<Item> scannedItems = await MockDatastore.GetItemsAsync();
+            Items.Clear();
+            Items.AddRange(scannedItems);
+            IsBusy = false;
+        }
+
+
+        //[RelayCommand]
+        //public async Task Appearing()
+        //{
+        //    Debug.WriteLine("-----------------------------------Executing on appear");
+        //    IsBusy = true;
+        //    IEnumerable<Item> scannedItems = await mockDatastore.GetItemsAsync();
+        //    Debug.WriteLine("HERE HERE HRER H------"+scannedItems.First().Quantity);
+        //    Items.Clear();
+        //    Items.AddRange(scannedItems);
+        //    Debug.WriteLine("In the itme"+Items.First().Quantity);
+        //    IsBusy = false;
+        //}
+
+        //[RelayCommand]
+        //public async Task LoadItems()
+        //{
+            
+        //    Debug.WriteLine("Items are loading -----------------");
+        //    await Appearing();
+        //    return;
+        //}
     }
 }

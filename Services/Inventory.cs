@@ -6,7 +6,7 @@ using MAUI_BarcodeScanner.Services;
 
 namespace MAUI_BarcodeScanner.Services
 {
-    class Inventory
+    public class Inventory
     {
         public List<InventoryItem> Items = new List<InventoryItem>
         {
@@ -14,7 +14,7 @@ namespace MAUI_BarcodeScanner.Services
             new InventoryItem { SKUId = "8906004863080", ProductName = "Origami Tissues" },
             new InventoryItem { SKUId = "4987176191359", ProductName = "Vicks Inhaler" },
             new InventoryItem { SKUId = "194632852486", ProductName = "Lenovo Backpack" },
-            new InventoryItem { SKUId = "1234567890129", ProductName = "Cycling Jersey" },
+            new InventoryItem { SKUId = "1234567890128", ProductName = "Cycling Jersey" },
         };
     }
 }
