@@ -4,7 +4,7 @@
              x:Class="MAUI_BarcodeScanner.Views.ItemsPage"
              xmlns:vm="clr-namespace:MAUI_BarcodeScanner.ViewModels"
              xmlns:model="clr-namespace:MAUI_BarcodeScanner.Models"
-             x:DataType="vm:ItemsViewModel"
+             x:DataType="vm:CartViewModel"
              xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
              Title="Cart View">
 
@@ -16,7 +16,7 @@
         <ToolbarItem Text="Clear All" Command="{Binding ClearAllItemsCommand}"/>
     </ContentPage.ToolbarItems>
     
-    <RefreshView x:DataType="vm:ItemsViewModel" Command="{Binding RefreshListCommand}" IsRefreshing="{Binding IsBusy}">
+    <RefreshView x:DataType="vm:CartViewModel" Command="{Binding RefreshListCommand}" IsRefreshing="{Binding IsBusy}">
         <CollectionView x:Name="ItemsListView"
             ItemsSource="{Binding Items}"
             SelectionMode="None">
@@ -33,8 +33,7 @@
             
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-
-                    <Grid x:DataType="model:Item" Padding="20">
+                    <Grid x:DataType="model:CartItem" Padding="20">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="Auto"/>
                             <ColumnDefinition Width="*"/>
@@ -44,7 +43,7 @@
                             <RowDefinition Height="Auto"/>
                             <RowDefinition Height="Auto"/>
                         </Grid.RowDefinitions>
-
+                      
                         <Label 
                         Text="{Binding ProductName}" 
                         LineBreakMode="TailTruncation" 
@@ -80,14 +79,14 @@
                         />
 
                         <Button 
-                        Text="Remove" 
+                        Text="Edit" 
                         Grid.Column="3"
                         Grid.RowSpan="2"
                         FontSize="12"
-                        BackgroundColor="IndianRed"
+                        WidthRequest="70"
                         TextTransform="None"
-                        Command="{Binding Source={RelativeSource AncestorType={x:Type vm:ItemsViewModel}}, Path=DeleteItemCommand}"
-                        CommandParameter="{Binding SKUId}"
+                        Command="{Binding Source={RelativeSource AncestorType={x:Type vm:CartViewModel}}, Path=SelectItemCommand}"
+                        CommandParameter="{Binding .}"
                     ></Button>
                     </Grid>
                 </DataTemplate>

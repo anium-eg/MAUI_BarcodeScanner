@@ -30,15 +30,16 @@ namespace MAUI_BarcodeScanner.ViewModels
             if (result != null && !HasFiredAlready)
             {
                 HasFiredAlready = true;
-                IEnumerable<Item> scannedItems = await dataStore.GetItemsAsync();
+                IEnumerable<CartItem> scannedItems = await dataStore.GetItemsAsync();
                 InventoryItem? scannedItem = inventory.Items.Find(item => item.SKUId == result.RawValue); 
 
                 if (scannedItem != null)
                 {
-                    await dataStore.AddItemAsync(new Item
+                    await dataStore.AddItemAsync(new CartItem
                     {
                         SKUId = scannedItem.SKUId,
-                        ProductName = scannedItem.ProductName
+                        ProductName = scannedItem.ProductName,
+                        PricePerItem = scannedItem.Price
                     });
 
                     await Shell.Current.GoToAsync("//"+nameof(ItemsPage));

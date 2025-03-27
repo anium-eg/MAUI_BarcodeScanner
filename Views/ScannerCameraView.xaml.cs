@@ -23,8 +23,6 @@ public partial class ScannerCameraView : ContentPage
         viewModel.HasFiredAlready = false;
     }
 
-
-
 }
 
 

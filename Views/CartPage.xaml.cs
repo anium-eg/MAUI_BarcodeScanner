@@ -5,9 +5,9 @@ namespace MAUI_BarcodeScanner.Views;
 
 public partial class ItemsPage : ContentPage
 {
-    readonly ItemsViewModel viewModel;
+    readonly CartViewModel viewModel;
     
-    public ItemsPage(ItemsViewModel _viewModel)
+    public ItemsPage(CartViewModel _viewModel)
 	{
 		InitializeComponent();
 		BindingContext = _viewModel;
