@@ -1,14 +1,11 @@
 ﻿
 using System.Collections.ObjectModel;
-using System.Diagnostics;
-using CommunityToolkit.Maui.Core.Extensions;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using MAUI_BarcodeScanner.Components;
 using MAUI_BarcodeScanner.Models;
 using MAUI_BarcodeScanner.Services;
-using Microsoft.Extensions.Logging;
-using MvvmHelpers;
+
 using The49.Maui.BottomSheet;
 
 
@@ -17,7 +14,10 @@ namespace MAUI_BarcodeScanner.ViewModels
     public partial class CartViewModel : ObservableObject
     {
 
-        public ObservableRangeCollection<CartItem> Items { get; set; } = new();
+        public RangedObservableCollection<CartItem> Items { get; set; } = new();
+
+        [ObservableProperty]
+        int totalPrice = 50;
 
         private Datastore _datastore;
         private ItemDetailSheet _detailSheet;
@@ -39,7 +39,7 @@ namespace MAUI_BarcodeScanner.ViewModels
         public async Task ClearAllItems()
         {
             await _datastore.ClearAllAsync();
-            Items.Clear();
+            await RefreshList();
         }
 
         [RelayCommand]
@@ -49,14 +49,15 @@ namespace MAUI_BarcodeScanner.ViewModels
             IEnumerable<CartItem> scannedItems = await _datastore.GetItemsAsync();
             Items.Clear();
             Items.AddRange(scannedItems);
+            TotalPrice = calculateTotalPrice();
             IsBusy = false;
         }
 
         [RelayCommand]
-        async Task SelectItem(CartItem selectedItem)
+        async void SelectItem(CartItem selectedItem)
         {
             _detailSheet.viewModel.CurrentItem = selectedItem;
-            await _detailSheet.ShowAsync();
+            _detailSheet.ShowAsync(); //Call is not awaited to prevent edit button from being stuck in a disabled state
         }
 
         private async void OnDismissed(object sender, DismissOrigin e)
@@ -67,8 +68,13 @@ namespace MAUI_BarcodeScanner.ViewModels
         private async void DeleteItem(object sender, string id)
         {
             await _datastore.DeleteItemAsync(id);
-            Items.Remove(Items.First(item => item.SKUId == id));
+            await RefreshList();
             await _detailSheet.DismissAsync();
+        }
+
+        private int calculateTotalPrice()
+        {
+            return Items.Sum(item => item.TotalPrice);
         }
 
     }

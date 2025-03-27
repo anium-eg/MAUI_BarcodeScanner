@@ -14,7 +14,7 @@ namespace MAUI_BarcodeScanner.ViewModels
     public partial class LoginViewModel : ObservableObject
     {
 
-        private static readonly HttpClient httpClient = new HttpClient();
+        private readonly HttpClient httpClient = new HttpClient();
         public LoginViewModel()
         {
             bool isLoggedIn = Preferences.Get("isLoggedIn", false);

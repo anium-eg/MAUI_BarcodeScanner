@@ -16,7 +16,7 @@ public partial class ItemsPage : ContentPage
 
     protected override void OnAppearing()
     {
-        viewModel.RefreshListCommand.Execute(null);
+        viewModel.RefreshListCommand.Execute(this);
         base.OnAppearing();
     }
 

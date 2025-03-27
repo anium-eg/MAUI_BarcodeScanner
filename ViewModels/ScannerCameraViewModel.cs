@@ -10,16 +10,16 @@ namespace MAUI_BarcodeScanner.ViewModels
 {
     public partial class ScannerCameraViewModel : ObservableObject
     {
-        readonly Inventory inventory;
-        readonly Datastore dataStore;
+        readonly Inventory _inventory;
+        readonly Datastore _dataStore;
 
         [ObservableProperty]
         private bool hasFiredAlready;
 
-        public ScannerCameraViewModel(Inventory _inventory, Datastore _datastore)
+        public ScannerCameraViewModel(Inventory inventory, Datastore datastore)
         {
-            inventory = _inventory;
-            dataStore = _datastore;
+            _inventory = inventory;
+            _dataStore = datastore;
         }
 
         [RelayCommand]
@@ -30,12 +30,12 @@ namespace MAUI_BarcodeScanner.ViewModels
             if (result != null && !HasFiredAlready)
             {
                 HasFiredAlready = true;
-                IEnumerable<CartItem> scannedItems = await dataStore.GetItemsAsync();
-                InventoryItem? scannedItem = inventory.Items.Find(item => item.SKUId == result.RawValue); 
+                IEnumerable<CartItem> scannedItems = await _dataStore.GetItemsAsync();
+                InventoryItem? scannedItem = _inventory.Items.Find(item => item.SKUId == result.RawValue); 
 
                 if (scannedItem != null)
                 {
-                    await dataStore.AddItemAsync(new CartItem
+                    await _dataStore.AddItemAsync(new CartItem
                     {
                         SKUId = scannedItem.SKUId,
                         ProductName = scannedItem.ProductName,

@@ -15,82 +15,105 @@
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Clear All" Command="{Binding ClearAllItemsCommand}"/>
     </ContentPage.ToolbarItems>
-    
-    <RefreshView x:DataType="vm:CartViewModel" Command="{Binding RefreshListCommand}" IsRefreshing="{Binding IsBusy}">
-        <CollectionView x:Name="ItemsListView"
-            ItemsSource="{Binding Items}"
-            SelectionMode="None">
-            <CollectionView.EmptyView>
-                <Label
-                Padding="0,40,0,40"
-                FontSize="Medium"
-                HorizontalTextAlignment="Center"
-                TextColor="Black"
-                >
-                    No items scanned yet.
-                </Label>
-            </CollectionView.EmptyView>
+
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+   
+        <RefreshView Command="{Binding RefreshListCommand}" IsRefreshing="{Binding IsBusy}" Grid.Row="0">
+            <CollectionView x:Name="ItemsListView"
+                ItemsSource="{Binding Items}"
+                SelectionMode="None">
+                <CollectionView.EmptyView>
+                    <Label
+                    Padding="0,40,0,40"
+                    FontSize="Medium"
+                    HorizontalTextAlignment="Center"
+                    TextColor="Black"
+                    >
+                        No items scanned yet.
+                    </Label>
+                </CollectionView.EmptyView>
             
-            <CollectionView.ItemTemplate>
-                <DataTemplate>
-                    <Grid x:DataType="model:CartItem" Padding="20">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="Auto"/>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="Auto"/>
-                        </Grid.ColumnDefinitions>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="Auto"/>
-                        </Grid.RowDefinitions>
-                      
-                        <Label 
-                        Text="{Binding ProductName}" 
-                        LineBreakMode="TailTruncation" 
-                        Style="{DynamicResource ListItemTextStyle}" 
-                        FontSize="18"
-                        Grid.Column="0"
-                        FontAttributes="Bold"
-                        TextColor="Black"
-                        />
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid x:DataType="model:CartItem" Padding="20">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
 
-                        <Label 
-                        Text="{Binding SKUId,StringFormat='SKU ID: {0}'}" 
-                        LineBreakMode="NoWrap"
-                        Style="{DynamicResource ListItemDetailTextStyle}"
-                        FontSize="13"
-                        Grid.Column="0"
-                        Grid.Row="1"
-                        TextColor="Black"
-                        />
+                            <HorizontalStackLayout Grid.Column="0">
+                                <Label 
+                                    Text="{Binding ProductName}" 
+                                    LineBreakMode="TailTruncation" 
+                                    FontSize="18"
+                                    FontAttributes="Bold"
+                                    TextColor="Black"
+                                />
 
-                        <Label 
-                        Text="{Binding Quantity, StringFormat='x {0}'}" 
-                        LineBreakMode="NoWrap"
-                        Style="{DynamicResource ListItemDetailTextStyle}"
-                        FontSize="23"
-                        Grid.Column="1"
-                        Grid.RowSpan="2"
-                        HorizontalTextAlignment="End"
-                        VerticalTextAlignment="Center"
-                        Margin="20,0,10,0"
-                        FontAttributes="Bold"
-                        TextColor="Black"
-                        />
+                                <Label 
+                                    Text="{Binding Quantity, StringFormat='x{0}'}" 
+                                    LineBreakMode="NoWrap"
+                                    FontSize="13"
+                                    VerticalTextAlignment="Center"
+                                    FontAttributes="Bold"
+                                    Margin="10,0,10,0"
+                                    TextColor="Black"
+                                />
+                            </HorizontalStackLayout>
 
-                        <Button 
-                        Text="Edit" 
-                        Grid.Column="3"
-                        Grid.RowSpan="2"
-                        FontSize="12"
-                        WidthRequest="70"
-                        TextTransform="None"
-                        Command="{Binding Source={RelativeSource AncestorType={x:Type vm:CartViewModel}}, Path=SelectItemCommand}"
-                        CommandParameter="{Binding .}"
-                    ></Button>
-                    </Grid>
-                </DataTemplate>
-            </CollectionView.ItemTemplate>
-        </CollectionView>
-    </RefreshView>
+                            <Label 
+                            Text="{Binding SKUId,StringFormat='SKU ID: {0}'}" 
+                            LineBreakMode="NoWrap"
+                            FontSize="13"
+                            Grid.Column="0"
+                            Grid.Row="1"
+                            TextColor="Black"
+                            />
+                            
+                            <Label 
+                            Text="{Binding PricePerItem, StringFormat='$ {0}'}" 
+                            LineBreakMode="NoWrap"
+                            FontSize="23"
+                            Grid.Column="1"
+                            Grid.RowSpan="2"
+                            HorizontalTextAlignment="End"
+                            VerticalTextAlignment="Center"
+                            Margin="20,0,10,0"
+                            FontAttributes="Bold"
+                            TextColor="Black"
+                            />
+                            
+                            <Button 
+                            Text="Edit" 
+                            Grid.Column="3"
+                            Grid.RowSpan="2"
+                            FontSize="12"
+                            WidthRequest="50"
+                            Command="{Binding Source={RelativeSource AncestorType={x:Type vm:CartViewModel}}, Path=SelectItemCommand}"
+                            CommandParameter="{Binding .}"
+                        ></Button>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </RefreshView>
+        <Border Grid.Row="1" Padding="20">
+            <Grid ColumnDefinitions="*,Auto">
+                <Label Text="Total Price" FontSize="Medium" Grid.Column="0"/>
+                <Label  Grid.Column="1" VerticalOptions="Center" FontSize="Large" FontAttributes="Bold" Text="{Binding TotalPrice, StringFormat='$ {0}'}"/>
+            </Grid>
+
+        </Border>
+
+    </Grid>
 </ContentPage>

@@ -7,7 +7,7 @@ namespace MAUI_BarcodeScanner.Components;
 public partial class ItemDetailSheet : BottomSheet
 {
 	public ItemDetailsViewModel viewModel;
-	public ItemDetailSheet(ItemDetailsViewModel _viewModel )
+	public ItemDetailSheet(ItemDetailsViewModel _viewModel)
 	{
         InitializeComponent();
 		BindingContext = _viewModel;

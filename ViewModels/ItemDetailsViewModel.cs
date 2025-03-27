@@ -16,7 +16,7 @@ namespace MAUI_BarcodeScanner.ViewModels
         public event EventHandler<string> deleteItemEvent;
 
         [RelayCommand]
-        public Task increaseQuantity()
+        public Task IncreaseQuantity()
         {
             CurrentItem.Quantity++;
             updateTotalPrice(CurrentItem);
@@ -25,7 +25,7 @@ namespace MAUI_BarcodeScanner.ViewModels
         }
 
         [RelayCommand]
-        public Task decreaseQuantity()
+        public Task DecreaseQuantity()
         {
             if (CurrentItem.Quantity == 1)
                 return Task.FromResult("Succes");
@@ -38,7 +38,7 @@ namespace MAUI_BarcodeScanner.ViewModels
         }
 
         [RelayCommand]
-        public async Task deleteItem()
+        public async Task DeleteItem()
         {
             string selectedOption = await Shell.Current.DisplayActionSheet("Are you sure?", "Delete", "Cancel");
             if(selectedOption == "Delete")
