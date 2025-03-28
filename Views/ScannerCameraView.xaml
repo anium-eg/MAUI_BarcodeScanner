@@ -10,5 +10,4 @@
         <ToolbarItem Text="Stop" Command="{Binding GoBackCommand}"/>
     </ContentPage.ToolbarItems>
     <scanner:CameraView OnDetectionFinishedCommand="{Binding BarcodeDetectedCommand}" CameraFacing="Back" CameraEnabled="True" />
-
 </ContentPage>

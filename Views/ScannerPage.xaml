@@ -5,7 +5,7 @@
              xmlns:vm="clr-namespace:MAUI_BarcodeScanner.ViewModels"
              BindingContext="{vm:ScannerViewModel}"
              x:DataType="vm:ScannerViewModel"
-             Title="Scanner Page">
+             Title="Scanner">
 
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Logout" Command="{Binding LogoutCommand}" />

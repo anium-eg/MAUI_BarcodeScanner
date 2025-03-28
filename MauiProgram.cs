@@ -35,6 +35,7 @@ public static class MauiProgram
 		builder.Services.AddTransient<CartViewModel>();
 		builder.Services.AddTransient<ScannerCameraViewModel>();
 		builder.Services.AddTransient<ItemDetailsViewModel>();
+		builder.Services.AddTransient<SearchViewModel>();
 
 		builder.Services.AddTransient<ItemDetailSheet>();
 
