@@ -14,7 +14,6 @@ public partial class ScannerCameraView : ContentPage
         InitializeComponent();
         BindingContext = _viewModel;
         viewModel = _viewModel;
-
     }
 
     protected override void OnAppearing()

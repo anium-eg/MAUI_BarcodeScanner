@@ -17,17 +17,17 @@ namespace MAUI_BarcodeScanner.ViewModels
         public RangedObservableCollection<CartItem> Items { get; set; } = new();
 
         [ObservableProperty]
-        int totalPrice = 50;
+        int totalPrice;
 
-        private Datastore _datastore;
+        private Cart _cart;
         private ItemDetailSheet _detailSheet;
 
         [ObservableProperty]
         public bool isBusy;
 
-        public CartViewModel(Datastore datastore, ItemDetailSheet detailSheet)
+        public CartViewModel(Cart cart, ItemDetailSheet detailSheet)
         {
-            _datastore = datastore;
+            _cart = cart;
             _detailSheet = detailSheet;
 
             _detailSheet.viewModel.deleteItemEvent += DeleteItem;
@@ -38,15 +38,20 @@ namespace MAUI_BarcodeScanner.ViewModels
         [RelayCommand]
         public async Task ClearAllItems()
         {
-            await _datastore.ClearAllAsync();
-            await RefreshList();
+            string confirmation = await Shell.Current.DisplayActionSheet("Are you sure you want to clear all items?", "Cancel", "Yes");
+            if (confirmation.Equals("Yes"))
+            {
+                await _cart.ClearAllAsync();
+                await RefreshList();
+            }
+
         }
 
         [RelayCommand]
         async Task RefreshList()
         {
             IsBusy = true;
-            IEnumerable<CartItem> scannedItems = await _datastore.GetItemsAsync();
+            IEnumerable<CartItem> scannedItems = await _cart.GetItemsAsync();
             Items.Clear();
             Items.AddRange(scannedItems);
             TotalPrice = calculateTotalPrice();
@@ -67,7 +72,7 @@ namespace MAUI_BarcodeScanner.ViewModels
 
         private async void DeleteItem(object sender, string id)
         {
-            await _datastore.DeleteItemAsync(id);
+            await _cart.DeleteItemAsync(id);
             await RefreshList();
             await _detailSheet.DismissAsync();
         }

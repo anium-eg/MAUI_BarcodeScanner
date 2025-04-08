@@ -29,7 +29,7 @@ public static class MauiProgram
 
 		builder.Services.AddSingleton<HttpClient>();
 
-		builder.Services.AddSingleton<Datastore>();
+		builder.Services.AddSingleton<Cart>();
 		builder.Services.AddSingleton<Inventory>();
 
 		builder.Services.AddTransient<CartViewModel>();

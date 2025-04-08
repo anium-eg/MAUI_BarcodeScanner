@@ -1,15 +1,20 @@
 ﻿
 using System.Collections.ObjectModel;
+using CommunityToolkit.Mvvm.ComponentModel;
 using MAUI_BarcodeScanner.Models;
 
 
 namespace MAUI_BarcodeScanner.Services
 {
-    public class Datastore
+    public class Cart
     {
 
         readonly ObservableCollection<CartItem> items;
-        public Datastore()
+
+
+        public int totalCost;
+
+        public Cart()
         {
             items = new ObservableCollection<CartItem>();
         }
@@ -21,12 +26,12 @@ namespace MAUI_BarcodeScanner.Services
             if (currentItem != null)
             {
                 currentItem.Quantity += 1;
-                currentItem.TotalPrice = currentItem.PricePerItem * currentItem.Quantity;
+
             }
 
             else
             {
-                item.TotalPrice = item.PricePerItem;
+
                 items.Add(item);
             }
                 

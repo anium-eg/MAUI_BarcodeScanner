@@ -1,11 +1,28 @@
-﻿namespace MAUI_BarcodeScanner.Models
+﻿using CommunityToolkit.Mvvm.ComponentModel;
+
+namespace MAUI_BarcodeScanner.Models
 {
-    public class CartItem
+    public partial class CartItem : ObservableObject
     {
-        public string SKUId { get; set; }
-        public string ProductName { get; set; }
-        public int PricePerItem { get; set; }
-        public int TotalPrice { get; set; }
-        public int Quantity { get; set; } = 1;
+        [ObservableProperty]
+        public string sKUId;
+
+        [ObservableProperty]
+        public string productName;
+
+        [ObservableProperty]
+        [NotifyPropertyChangedFor(nameof(TotalPrice))]
+        public int pricePerItem;
+
+        [ObservableProperty]
+        public int mRP;
+
+        [ObservableProperty]
+        [NotifyPropertyChangedFor(nameof(TotalPrice))]
+        public int quantity = 1;
+
+        public int TotalPrice => PricePerItem * Quantity;
+
+
     }
 }

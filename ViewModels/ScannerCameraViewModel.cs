@@ -11,12 +11,12 @@ namespace MAUI_BarcodeScanner.ViewModels
     public partial class ScannerCameraViewModel : ObservableObject
     {
         readonly Inventory _inventory;
-        readonly Datastore _dataStore;
+        readonly Cart _dataStore;
 
         [ObservableProperty]
         private bool hasFiredAlready;
 
-        public ScannerCameraViewModel(Inventory inventory, Datastore datastore)
+        public ScannerCameraViewModel(Inventory inventory, Cart datastore)
         {
             _inventory = inventory;
             _dataStore = datastore;
@@ -39,7 +39,9 @@ namespace MAUI_BarcodeScanner.ViewModels
                     {
                         SKUId = scannedItem.SKUId,
                         ProductName = scannedItem.ProductName,
-                        PricePerItem = scannedItem.Price
+                        PricePerItem = scannedItem.Price,
+                        MRP = scannedItem.Price
+                        
                     });
 
                     await Shell.Current.GoToAsync("//"+nameof(ItemsPage));

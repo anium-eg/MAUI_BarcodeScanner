@@ -9,5 +9,11 @@
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Stop" Command="{Binding GoBackCommand}"/>
     </ContentPage.ToolbarItems>
-    <scanner:CameraView OnDetectionFinishedCommand="{Binding BarcodeDetectedCommand}" CameraFacing="Back" CameraEnabled="True" />
+    <scanner:CameraView 
+        x:Name="scanner"
+        OnDetectionFinishedCommand="{Binding BarcodeDetectedCommand}" 
+        CameraFacing="Back" 
+        AimMode="True"
+        scanner:VibrationOnDetected="True"
+        CameraEnabled="True" />
 </ContentPage>

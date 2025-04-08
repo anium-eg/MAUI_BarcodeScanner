@@ -59,7 +59,16 @@ namespace MAUI_BarcodeScanner.ViewModels
                 //Mocking server authentication request
                 HttpResponseMessage response = await httpClient.GetAsync("https://google.com");
 
-                if(loginData.CashierId == "cash001" && loginData.Password == "password")
+                ////HttpResponseMessage res1 = await httpClient.GetAsync("http://10.0.2.2:5042/api/products");
+
+
+                ////using Stream stream = await res1.Content.ReadAsStreamAsync();
+                //using StreamReader reader = new StreamReader(stream);
+                //string content = await reader.ReadToEndAsync();
+                //Console.WriteLine(content);
+                //Debug.WriteLine("----------------------------------------------" + content);
+
+                if (loginData.CashierId == "cash001" && loginData.Password == "password")
                 {
                     Preferences.Set("isLoggedIn", true);
                     await Shell.Current.GoToAsync($"//{nameof(ScannerPage)}");
@@ -73,6 +82,7 @@ namespace MAUI_BarcodeScanner.ViewModels
             }
             catch (Exception ex)
             {
+                Debug.WriteLine(ex.Message);
                 ShowInvalidText = true;
                 InvalidText = "Connection error. Try again.";
             }

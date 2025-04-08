@@ -10,14 +10,14 @@ namespace MAUI_BarcodeScanner.ViewModels
     public partial class SearchViewModel:ObservableObject
     {
         Inventory _inventory;
-        Datastore _datastore;
+        Cart _cart;
 
         public RangedObservableCollection<InventoryItem> InventoryItems { get; set; } = new();
 
-        public SearchViewModel(Inventory inventory, Datastore datastore)
+        public SearchViewModel(Inventory inventory, Cart cart)
         {
             _inventory = inventory;
-            _datastore = datastore;
+            _cart = cart;
         }
 
 
@@ -44,11 +44,12 @@ namespace MAUI_BarcodeScanner.ViewModels
         [RelayCommand]
         public async Task AddToCart(InventoryItem item)
         {
-            await _datastore.AddItemAsync(new CartItem
+            await _cart.AddItemAsync(new CartItem
             {
                 SKUId = item.SKUId,
                 ProductName = item.ProductName,
-                PricePerItem = item.Price
+                PricePerItem = item.Price,
+                MRP = item.Price
             });
 
             await Shell.Current.DisplayAlert("Item added!", item.ProductName + " added to cart", "Ok");
