@@ -27,7 +27,7 @@ namespace MAUI_BarcodeScanner.ViewModels
 
         [ObservableProperty]
         public bool isPriceInvalid;
-
+        
         [ObservableProperty]
         public string invalidPriceMessage = "";
 

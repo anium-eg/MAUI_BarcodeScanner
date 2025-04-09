@@ -5,6 +5,7 @@ using MAUI_BarcodeScanner.Services;
 using MAUI_BarcodeScanner.ViewModels;
 using MAUI_BarcodeScanner.Views;
 using Microsoft.Extensions.Logging;
+using Mopups.Hosting;
 using The49.Maui.BottomSheet;
 using ZXing.Net.Maui.Controls;
 
@@ -20,7 +21,9 @@ public static class MauiProgram
 			.UseMauiApp<App>().UseBarcodeScanning()
 			.UseMauiCommunityToolkit()
 			.UseBottomSheet()
-			.ConfigureFonts(fonts =>
+			.ConfigureMopups()
+			.ConfigureAnimations()
+			 .ConfigureFonts(fonts =>
 			{
 				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
@@ -36,6 +39,7 @@ public static class MauiProgram
 		builder.Services.AddTransient<ScannerCameraViewModel>();
 		builder.Services.AddTransient<ItemDetailsViewModel>();
 		builder.Services.AddTransient<SearchViewModel>();
+		//builder.Services.AddTransient<MopupDetailSheetViewModel>();
 
 		builder.Services.AddTransient<ItemDetailSheet>();
 

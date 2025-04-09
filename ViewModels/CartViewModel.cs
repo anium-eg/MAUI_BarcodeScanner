@@ -1,11 +1,12 @@
 ﻿
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using MAUI_BarcodeScanner.Components;
 using MAUI_BarcodeScanner.Models;
 using MAUI_BarcodeScanner.Services;
-
+using Mopups.Services;
 using The49.Maui.BottomSheet;
 
 
@@ -13,14 +14,12 @@ namespace MAUI_BarcodeScanner.ViewModels
 {
     public partial class CartViewModel : ObservableObject
     {
-
         public RangedObservableCollection<CartItem> Items { get; set; } = new();
 
         [ObservableProperty]
         int totalPrice;
 
         private Cart _cart;
-        private ItemDetailSheet _detailSheet;
 
         [ObservableProperty]
         public bool isBusy;
@@ -28,12 +27,7 @@ namespace MAUI_BarcodeScanner.ViewModels
         public CartViewModel(Cart cart, ItemDetailSheet detailSheet)
         {
             _cart = cart;
-            _detailSheet = detailSheet;
-
-            _detailSheet.viewModel.deleteItemEvent += DeleteItem;
-            _detailSheet.Dismissed += OnDismissed;
         }
-
 
         [RelayCommand]
         public async Task ClearAllItems()
@@ -61,11 +55,16 @@ namespace MAUI_BarcodeScanner.ViewModels
         [RelayCommand]
         async void SelectItem(CartItem selectedItem)
         {
-            _detailSheet.viewModel.CurrentItem = selectedItem;
-            _detailSheet.ShowAsync(); //Call is not awaited to prevent edit button from being stuck in a disabled state
+
+            MopupDetailSheetViewModel detailSheetViewModel = new MopupDetailSheetViewModel(selectedItem);
+            detailSheetViewModel.deleteItemEvent += DeleteItem;
+            detailSheetViewModel.popupClosedEvent += OnDismissed;
+
+            await MopupService.Instance.PushAsync(new MopupDetailSheet(detailSheetViewModel));
+
         }
 
-        private async void OnDismissed(object sender, DismissOrigin e)
+        private async void OnDismissed(object? sender, EventArgs e)
         {
             await RefreshList();
         }
@@ -74,7 +73,7 @@ namespace MAUI_BarcodeScanner.ViewModels
         {
             await _cart.DeleteItemAsync(id);
             await RefreshList();
-            await _detailSheet.DismissAsync();
+            await MopupService.Instance.PopAsync();
         }
 
         private int calculateTotalPrice()
