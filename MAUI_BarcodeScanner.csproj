@@ -73,7 +73,6 @@
 		<PackageReference Include="Mopups" Version="1.3.2" />
 		<PackageReference Include="RangedObservableCollection" Version="1.0.1" />
 		<PackageReference Include="The49.Maui.BottomSheet" Version="8.0.3" />
-		<PackageReference Include="ZXing.Net.Maui.Controls" Version="0.4.0" />
 	</ItemGroup>
 
 	<ItemGroup>

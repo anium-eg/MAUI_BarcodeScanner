@@ -33,7 +33,6 @@ namespace MAUI_BarcodeScanner.ViewModels
         }
 
 
-
         [ObservableProperty]
         [NotifyPropertyChangedFor(nameof(CurrentItem))]
         public string pricePerItem;
@@ -56,14 +55,9 @@ namespace MAUI_BarcodeScanner.ViewModels
             if (int.TryParse(PricePerItem, out int result))
             {
                 currentItem.PricePerItem = result;
-
                 ValidationResult validationResult = cartValidator.Validate(CurrentItem);
-
                 IsPriceInvalid = !validationResult.IsValid;
-
                 InvalidPriceMessage = validationResult.Errors.FirstOrDefault()?.ErrorMessage ?? string.Empty;
-
-
             }
 
             else
@@ -72,9 +66,7 @@ namespace MAUI_BarcodeScanner.ViewModels
                 InvalidPriceMessage = "Please enter a valid number";
             }
 
-
         }
-
 
         [RelayCommand]
         public Task IncreaseQuantity()
@@ -82,6 +74,7 @@ namespace MAUI_BarcodeScanner.ViewModels
             CurrentItem.Quantity++;
             return Task.FromResult("Success");
         }
+
 
         [RelayCommand]
         public Task DecreaseQuantity()
@@ -94,6 +87,7 @@ namespace MAUI_BarcodeScanner.ViewModels
 
         }
 
+
         [RelayCommand]
         public async Task DeleteItem()
         {
@@ -104,12 +98,14 @@ namespace MAUI_BarcodeScanner.ViewModels
             }
         }
 
+
         [RelayCommand(CanExecute = nameof(CanCloseBottomSheet))]
         public async Task CloseBottomSheet()
         {
             popupClosedEvent.Invoke(this,null);
             await MopupService.Instance.PopAsync();
         }
+
 
         [RelayCommand]
         public async Task BackgroundClicked()

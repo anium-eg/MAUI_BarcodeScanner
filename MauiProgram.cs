@@ -7,7 +7,7 @@ using MAUI_BarcodeScanner.Views;
 using Microsoft.Extensions.Logging;
 using Mopups.Hosting;
 using The49.Maui.BottomSheet;
-using ZXing.Net.Maui.Controls;
+
 
 namespace MAUI_BarcodeScanner;
 

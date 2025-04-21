@@ -24,7 +24,7 @@ namespace MAUI_BarcodeScanner.ViewModels
         [ObservableProperty]
         public bool isBusy;
 
-        public CartViewModel(Cart cart, ItemDetailSheet detailSheet)
+        public CartViewModel(Cart cart)
         {
             _cart = cart;
         }
@@ -69,7 +69,7 @@ namespace MAUI_BarcodeScanner.ViewModels
             await RefreshList();
         }
 
-        private async void DeleteItem(object sender, string id)
+        private async void DeleteItem(object? sender, string id)
         {
             await _cart.DeleteItemAsync(id);
             await RefreshList();
