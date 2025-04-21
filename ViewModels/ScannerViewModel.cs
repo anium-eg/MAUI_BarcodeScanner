@@ -1,37 +1,25 @@
 ﻿
-using System.Windows.Input;
-
-using MAUI_BarcodeScanner.Models;
-using MAUI_BarcodeScanner.Services;
+using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
 using MAUI_BarcodeScanner.Views;
+
 
 namespace MAUI_BarcodeScanner.ViewModels
 {
-    public class ScannerViewModel : BaseViewModel
+    public partial class ScannerViewModel : ObservableObject
     {
-        private readonly IDataStore<Item> dataStore;
-        private readonly Inventory inventory;
 
-        public ScannerViewModel()
+        [RelayCommand]
+        private async Task OpenScanner()
         {
-            Title = "Item Scanner";
-            OpenScannerCommand = new Command(OpenScannerFunction);
-            LogoutCommand = new Command(Logout);
-            dataStore = DependencyService.Get<IDataStore<Item>>();
-            inventory = DependencyService.Get<Inventory>();
-
-        }
-        public ICommand OpenScannerCommand { get; }
-        public ICommand LogoutCommand { get; }
-        public async void OpenScannerFunction()
-        {
-             await Application.Current.MainPage.Navigation.PushAsync(new ScannerCameraView());
+            await Shell.Current.GoToAsync("//"+nameof(ScannerCameraView));
         }
 
-        public async void Logout()
+        [RelayCommand]
+        public async Task Logout()
         {
             Preferences.Set("isLoggedIn", false);
-            await Shell.Current.GoToAsync("//LoginPage");
+            await Shell.Current.GoToAsync("//"+nameof(LoginPage));
         }
 
 

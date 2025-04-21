@@ -2,16 +2,18 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MAUI_BarcodeScanner.Views.ScannerCameraView"
-             xmlns:zxing ="clr-namespace:ZXing.Net.Maui.Controls;assembly=ZXing.Net.MAUI.Controls"
+             xmlns:scanner="clr-namespace:BarcodeScanning;assembly=BarcodeScanning.Native.Maui"
+             xmlns:vm="clr-namespace:MAUI_BarcodeScanner.ViewModels"
+             x:DataType="vm:ScannerCameraViewModel"
              Title="Barcode Scanner">
-
-
-        <zxing:CameraBarcodeReaderView
-            x:Name="barcodeReaderComponent"
-            BarcodesDetected="CameraBarcodeReaderView_BarcodesDetected"
-            MinimumHeightRequest="100000"
-            >
-            
-        </zxing:CameraBarcodeReaderView>
-
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Stop" Command="{Binding GoBackCommand}"/>
+    </ContentPage.ToolbarItems>
+    <scanner:CameraView 
+        x:Name="scanner"
+        OnDetectionFinishedCommand="{Binding BarcodeDetectedCommand}" 
+        CameraFacing="Back" 
+        AimMode="True"
+        scanner:VibrationOnDetected="True"
+        CameraEnabled="True" />
 </ContentPage>
