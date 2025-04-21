@@ -1,5 +1,6 @@
 ﻿using BarcodeScanning;
 using CommunityToolkit.Maui;
+using KeyboardVisibilityListener;
 using MAUI_BarcodeScanner.Components;
 using MAUI_BarcodeScanner.Services;
 using MAUI_BarcodeScanner.ViewModels;
@@ -23,7 +24,8 @@ public static class MauiProgram
 			.UseBottomSheet()
 			.ConfigureMopups()
 			.ConfigureAnimations()
-			 .ConfigureFonts(fonts =>
+			.UseKeyboardVisibilityListener()
+			.ConfigureFonts(fonts =>
 			{
 				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");

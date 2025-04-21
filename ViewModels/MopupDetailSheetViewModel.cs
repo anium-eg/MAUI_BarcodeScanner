@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using FluentValidation.Results;
+using KeyboardVisibilityListener;
 using MAUI_BarcodeScanner.Components;
 using MAUI_BarcodeScanner.Helpers.Validators;
 using MAUI_BarcodeScanner.Models;
@@ -30,6 +31,10 @@ namespace MAUI_BarcodeScanner.ViewModels
             CurrentItem = cartItem;
             pricePerItem = CurrentItem.PricePerItem.ToString();
             cartValidator = new CartItemPriceValidator();
+
+            KeyboardVisibilityState VisibilityState = KeyboardVisibilityState.Instance;
+
+            KeyboardVisibilityState.VisibilityChanged += KeyboardVisibilityState_VisibilityChanged;
         }
 
 
@@ -49,6 +54,17 @@ namespace MAUI_BarcodeScanner.ViewModels
 
         public event EventHandler popupClosedEvent;
         public event EventHandler<string> deleteItemEvent;
+
+        [ObservableProperty]
+        public double yOffset = 0;
+
+
+        private void KeyboardVisibilityState_VisibilityChanged(object? sender, KeyboardVisibilityStateChangedEventArgs e)
+        {
+            YOffset = e.CurrentValue ? -285 : 0;
+
+        }
+
 
         partial void OnPricePerItemChanged(string value)
         {
