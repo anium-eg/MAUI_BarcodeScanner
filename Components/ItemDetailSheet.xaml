@@ -1,0 +1,56 @@
+<the49:BottomSheet xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:the49="https://schemas.the49.com/dotnet/2023/maui"
+             xmlns:converters="clr-namespace:MAUI_BarcodeScanner.Helpers.Converters"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             x:Class="MAUI_BarcodeScanner.Components.ItemDetailSheet"
+             xmlns:vm="clr-namespace:MAUI_BarcodeScanner.ViewModels"
+             x:DataType="vm:ItemDetailsViewModel"
+             HasHandle="True"
+             IsCancelable="{Binding IsPriceInvalid, Converter={StaticResource BoolNegationConverter }}"
+             HasBackdrop="True" >
+    <the49:BottomSheet.Resources>
+        <ResourceDictionary>
+            <converters:TextChangedEventParameterConverter x:Key="TextChangedEventParameterConverter"/>
+            <converters:BooleanNegationConverter x:Key="BoolNegationConverter"/>
+        </ResourceDictionary>
+    </the49:BottomSheet.Resources>
+    <VerticalStackLayout Spacing="16"  Padding="30">
+        <Label Text="{Binding CurrentItem.ProductName}" FontSize="Large" FontAttributes="Bold"/>
+
+        <HorizontalStackLayout >
+            <VerticalStackLayout HorizontalOptions="Start">
+                <Label Text="SKU ID" FontAttributes="Bold" FontSize="Small" />
+                <Label Text="{Binding CurrentItem.SKUId}" FontSize="Small"/>
+
+                <Label Text="MRP"  FontAttributes="Bold" FontSize="Small"  Margin="0,10,0,0"/>
+                <Label Text="{Binding CurrentItem.MRP,StringFormat='$ {0}'}"/>
+
+                <Label Text="Price"  FontAttributes="Bold" FontSize="Small"  Margin="0,10,0,0"/>
+
+                <HorizontalStackLayout>
+                    <Label VerticalOptions="Center">$</Label>
+                    <Entry Text="{Binding PricePerItem}" WidthRequest="100"/>
+
+
+                </HorizontalStackLayout>
+
+            </VerticalStackLayout>
+
+            <VerticalStackLayout VerticalOptions="Start" HorizontalOptions="End" Margin="30,0,0,0">
+                <Label Text="Quantity"  FontAttributes="Bold" FontSize="Small" />
+                <HorizontalStackLayout Margin="0,10,0,0">
+                    <Button Text="-" Command="{Binding DecreaseQuantityCommand}" WidthRequest="3" HeightRequest="3" FontSize="20"/>
+                    <Label Text="{Binding CurrentItem.Quantity}" FontSize="Medium" VerticalOptions="Center" Margin="10"/>
+                    <Button Text="+" WidthRequest="3" HeightRequest="3" FontSize="20" Command="{Binding IncreaseQuantityCommand}"/>
+                </HorizontalStackLayout>
+                <Label Text="Total Price"  FontAttributes="Bold" FontSize="Small"  Margin="0,10,0,0"/>
+                <Label Text="{Binding CurrentItem.TotalPrice,StringFormat='$ {0}'}" FontSize="Large" FontAttributes="Bold"/>
+            </VerticalStackLayout>
+        </HorizontalStackLayout>
+
+        <Label TextColor="IndianRed" Text="{Binding InvalidPriceMessage}" IsVisible="{Binding IsPriceInvalid}"/>
+        <Button Text="Remove" FontSize="Micro" BackgroundColor="IndianRed" HeightRequest="2" Margin="0,10,0,0" Command="{Binding DeleteItemCommand }"></Button>
+    </VerticalStackLayout>
+
+</the49:BottomSheet>

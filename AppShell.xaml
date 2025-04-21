@@ -12,6 +12,7 @@
 
 
     <TabBar>
+        <ShellContent Title="Search" Icon="search_icon.png" Route="SearchPage" ContentTemplate="{DataTemplate local:SearchPage}"/>
         <ShellContent Title="Scanner" Icon="scanner_small.png" Route="ScannerPage" ContentTemplate="{DataTemplate local:ScannerPage}" />
         <ShellContent Title="Cart" Icon="cart_icon.png" Route="ItemsPage" ContentTemplate="{DataTemplate local:ItemsPage}" />
     </TabBar>

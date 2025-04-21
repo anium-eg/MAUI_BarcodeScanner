@@ -3,46 +3,25 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MAUI_BarcodeScanner.Views.ScannerPage"
              xmlns:vm="clr-namespace:MAUI_BarcodeScanner.ViewModels"
-             Title="{Binding Title}">
-    <ContentPage.BindingContext>
-        <vm:ScannerViewModel />
-    </ContentPage.BindingContext>
-
-    <ContentPage.Resources>
-        <ResourceDictionary>
-            <Color x:Key="Accent">#96d1ff</Color>
-        </ResourceDictionary>
-    </ContentPage.Resources>
+             BindingContext="{vm:ScannerViewModel}"
+             x:DataType="vm:ScannerViewModel"
+             Title="Scanner">
 
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Logout"
-             Order="Primary"
-             Priority="0"
-             Command="{Binding LogoutCommand}" />
+        <ToolbarItem Text="Logout" Command="{Binding LogoutCommand}" />
     </ContentPage.ToolbarItems>
 
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
+    <VerticalStackLayout VerticalOptions="Center" HorizontalOptions="Center" Spacing="10">
+        <Image Source="scanner.png" HeightRequest="100" WidthRequest="100"/>
 
-        <StackLayout Grid.Row="1" VerticalOptions="Center" HorizontalOptions="Center" Spacing="10">
-            <Image Source="scanner.png" HeightRequest="100" WidthRequest="100"/>
-
-            <Button Text="Click to scan"
-            x:Name="buttonScan"
+        <Button Text="Click to scan"
+            x:Name="ScanButton"
             Command="{Binding OpenScannerCommand}"
-            BackgroundColor="{StaticResource Primary}"
-            TextColor="White"
             FontSize="18"
             Padding="15"
             Margin="40"
             CornerRadius="6"
-            WidthRequest="200"
-            TextTransform="None">
-            </Button>
-        </StackLayout>
-    </Grid>
+            WidthRequest="200"/>
+    </VerticalStackLayout>
     
 </ContentPage>
