@@ -4,11 +4,574 @@
         <name>MAUI_BarcodeScanner</name>
     </assembly>
     <members>
+        <member name="T:MAUI_BarcodeScanner.Models.CartItem">
+            <inheritdoc/>
+        </member>
+        <member name="P:MAUI_BarcodeScanner.Models.CartItem.SKUId">
+            <inheritdoc cref="F:MAUI_BarcodeScanner.Models.CartItem.sKUId"/>
+        </member>
+        <member name="P:MAUI_BarcodeScanner.Models.CartItem.ProductName">
+            <inheritdoc cref="F:MAUI_BarcodeScanner.Models.CartItem.productName"/>
+        </member>
+        <member name="P:MAUI_BarcodeScanner.Models.CartItem.PricePerItem">
+            <inheritdoc cref="F:MAUI_BarcodeScanner.Models.CartItem.pricePerItem"/>
+        </member>
+        <member name="P:MAUI_BarcodeScanner.Models.CartItem.MRP">
+            <inheritdoc cref="F:MAUI_BarcodeScanner.Models.CartItem.mRP"/>
+        </member>
+        <member name="P:MAUI_BarcodeScanner.Models.CartItem.Quantity">
+            <inheritdoc cref="F:MAUI_BarcodeScanner.Models.CartItem.quantity"/>
+        </member>
+        <member name="T:MAUI_BarcodeScanner.ViewModels.AddNewInventoryItemPopupViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:MAUI_BarcodeScanner.ViewModels.AddNewInventoryItemPopupViewModel.SkuId">
+            <inheritdoc cref="F:MAUI_BarcodeScanner.ViewModels.AddNewInventoryItemPopupViewModel.skuId"/>
+        </member>
+        <member name="P:MAUI_BarcodeScanner.ViewModels.AddNewInventoryItemPopupViewModel.ProductName">
+            <inheritdoc cref="F:MAUI_BarcodeScanner.ViewModels.AddNewInventoryItemPopupViewModel.productName"/>
+        </member>
+        <member name="P:MAUI_BarcodeScanner.ViewModels.AddNewInventoryItemPopupViewModel.ProductPrice">
+            <inheritdoc cref="F:MAUI_BarcodeScanner.ViewModels.AddNewInventoryItemPopupViewModel.productPrice"/>
+        </member>
+        <member name="P:MAUI_BarcodeScanner.ViewModels.AddNewInventoryItemPopupViewModel.ProductStock">
+            <inheritdoc cref="F:MAUI_BarcodeScanner.ViewModels.AddNewInventoryItemPopupViewModel.productStock"/>
+        </member>
+        <member name="P:MAUI_BarcodeScanner.ViewModels.AddNewInventoryItemPopupViewModel.IsLoading">
+            <inheritdoc cref="F:MAUI_BarcodeScanner.ViewModels.AddNewInventoryItemPopupViewModel.isLoading"/>
+        </member>
+        <member name="P:MAUI_BarcodeScanner.ViewModels.AddNewInventoryItemPopupViewModel.HasErrors">
+            <inheritdoc cref="F:MAUI_BarcodeScanner.ViewModels.AddNewInventoryItemPopupViewModel.hasErrors"/>
+        </member>
+        <member name="P:MAUI_BarcodeScanner.ViewModels.AddNewInventoryItemPopupViewModel.ErrorMessage">
+            <inheritdoc cref="F:MAUI_BarcodeScanner.ViewModels.AddNewInventoryItemPopupViewModel.errorMessage"/>
+        </member>
+        <member name="F:MAUI_BarcodeScanner.ViewModels.AddNewInventoryItemPopupViewModel.submitNewItemRequestCommand">
+            <summary>The backing field for <see cref="P:MAUI_BarcodeScanner.ViewModels.AddNewInventoryItemPopupViewModel.SubmitNewItemRequestCommand"/>.</summary>
+        </member>
+        <member name="P:MAUI_BarcodeScanner.ViewModels.AddNewInventoryItemPopupViewModel.SubmitNewItemRequestCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:MAUI_BarcodeScanner.ViewModels.AddNewInventoryItemPopupViewModel.SubmitNewItemRequest"/>.</summary>
+        </member>
+        <member name="F:MAUI_BarcodeScanner.ViewModels.AddNewInventoryItemPopupViewModel.popupBackgroundClickedCommand">
+            <summary>The backing field for <see cref="P:MAUI_BarcodeScanner.ViewModels.AddNewInventoryItemPopupViewModel.PopupBackgroundClickedCommand"/>.</summary>
+        </member>
+        <member name="P:MAUI_BarcodeScanner.ViewModels.AddNewInventoryItemPopupViewModel.PopupBackgroundClickedCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:MAUI_BarcodeScanner.ViewModels.AddNewInventoryItemPopupViewModel.PopupBackgroundClicked"/>.</summary>
+        </member>
+        <member name="T:MAUI_BarcodeScanner.ViewModels.CartViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:MAUI_BarcodeScanner.ViewModels.CartViewModel.TotalPrice">
+            <inheritdoc cref="F:MAUI_BarcodeScanner.ViewModels.CartViewModel.totalPrice"/>
+        </member>
+        <member name="P:MAUI_BarcodeScanner.ViewModels.CartViewModel.IsBusy">
+            <inheritdoc cref="F:MAUI_BarcodeScanner.ViewModels.CartViewModel.isBusy"/>
+        </member>
+        <member name="F:MAUI_BarcodeScanner.ViewModels.CartViewModel.clearAllItemsCommand">
+            <summary>The backing field for <see cref="P:MAUI_BarcodeScanner.ViewModels.CartViewModel.ClearAllItemsCommand"/>.</summary>
+        </member>
+        <member name="P:MAUI_BarcodeScanner.ViewModels.CartViewModel.ClearAllItemsCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:MAUI_BarcodeScanner.ViewModels.CartViewModel.ClearAllItems"/>.</summary>
+        </member>
+        <member name="F:MAUI_BarcodeScanner.ViewModels.CartViewModel.refreshListCommand">
+            <summary>The backing field for <see cref="P:MAUI_BarcodeScanner.ViewModels.CartViewModel.RefreshListCommand"/>.</summary>
+        </member>
+        <member name="P:MAUI_BarcodeScanner.ViewModels.CartViewModel.RefreshListCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:MAUI_BarcodeScanner.ViewModels.CartViewModel.RefreshList"/>.</summary>
+        </member>
+        <member name="F:MAUI_BarcodeScanner.ViewModels.CartViewModel.selectItemCommand">
+            <summary>The backing field for <see cref="P:MAUI_BarcodeScanner.ViewModels.CartViewModel.SelectItemCommand"/>.</summary>
+        </member>
+        <member name="P:MAUI_BarcodeScanner.ViewModels.CartViewModel.SelectItemCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand`1"/> instance wrapping <see cref="M:MAUI_BarcodeScanner.ViewModels.CartViewModel.SelectItem(MAUI_BarcodeScanner.Models.CartItem)"/>.</summary>
+        </member>
+        <member name="T:MAUI_BarcodeScanner.ViewModels.ItemDetailsViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:MAUI_BarcodeScanner.ViewModels.ItemDetailsViewModel.CurrentItem">
+            <inheritdoc cref="F:MAUI_BarcodeScanner.ViewModels.ItemDetailsViewModel.currentItem"/>
+        </member>
+        <member name="P:MAUI_BarcodeScanner.ViewModels.ItemDetailsViewModel.PricePerItem">
+            <inheritdoc cref="F:MAUI_BarcodeScanner.ViewModels.ItemDetailsViewModel.pricePerItem"/>
+        </member>
+        <member name="P:MAUI_BarcodeScanner.ViewModels.ItemDetailsViewModel.IsPriceInvalid">
+            <inheritdoc cref="F:MAUI_BarcodeScanner.ViewModels.ItemDetailsViewModel.isPriceInvalid"/>
+        </member>
+        <member name="P:MAUI_BarcodeScanner.ViewModels.ItemDetailsViewModel.InvalidPriceMessage">
+            <inheritdoc cref="F:MAUI_BarcodeScanner.ViewModels.ItemDetailsViewModel.invalidPriceMessage"/>
+        </member>
+        <member name="M:MAUI_BarcodeScanner.ViewModels.ItemDetailsViewModel.OnPricePerItemChanged(System.String)">
+            <summary>Executes the logic for when <see cref="P:MAUI_BarcodeScanner.ViewModels.ItemDetailsViewModel.PricePerItem"/> just changed.</summary>
+            <param name="value">The new property value that was set.</param>
+            <remarks>This method is invoked right after the value of <see cref="P:MAUI_BarcodeScanner.ViewModels.ItemDetailsViewModel.PricePerItem"/> is changed.</remarks>
+        </member>
+        <member name="F:MAUI_BarcodeScanner.ViewModels.ItemDetailsViewModel.increaseQuantityCommand">
+            <summary>The backing field for <see cref="P:MAUI_BarcodeScanner.ViewModels.ItemDetailsViewModel.IncreaseQuantityCommand"/>.</summary>
+        </member>
+        <member name="P:MAUI_BarcodeScanner.ViewModels.ItemDetailsViewModel.IncreaseQuantityCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:MAUI_BarcodeScanner.ViewModels.ItemDetailsViewModel.IncreaseQuantity"/>.</summary>
+        </member>
+        <member name="F:MAUI_BarcodeScanner.ViewModels.ItemDetailsViewModel.decreaseQuantityCommand">
+            <summary>The backing field for <see cref="P:MAUI_BarcodeScanner.ViewModels.ItemDetailsViewModel.DecreaseQuantityCommand"/>.</summary>
+        </member>
+        <member name="P:MAUI_BarcodeScanner.ViewModels.ItemDetailsViewModel.DecreaseQuantityCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:MAUI_BarcodeScanner.ViewModels.ItemDetailsViewModel.DecreaseQuantity"/>.</summary>
+        </member>
+        <member name="F:MAUI_BarcodeScanner.ViewModels.ItemDetailsViewModel.deleteItemCommand">
+            <summary>The backing field for <see cref="P:MAUI_BarcodeScanner.ViewModels.ItemDetailsViewModel.DeleteItemCommand"/>.</summary>
+        </member>
+        <member name="P:MAUI_BarcodeScanner.ViewModels.ItemDetailsViewModel.DeleteItemCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:MAUI_BarcodeScanner.ViewModels.ItemDetailsViewModel.DeleteItem"/>.</summary>
+        </member>
+        <member name="T:MAUI_BarcodeScanner.ViewModels.LoginViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:MAUI_BarcodeScanner.ViewModels.LoginViewModel.CashierId">
+            <inheritdoc cref="F:MAUI_BarcodeScanner.ViewModels.LoginViewModel.cashierId"/>
+        </member>
+        <member name="P:MAUI_BarcodeScanner.ViewModels.LoginViewModel.Password">
+            <inheritdoc cref="F:MAUI_BarcodeScanner.ViewModels.LoginViewModel.password"/>
+        </member>
+        <member name="P:MAUI_BarcodeScanner.ViewModels.LoginViewModel.InvalidText">
+            <inheritdoc cref="F:MAUI_BarcodeScanner.ViewModels.LoginViewModel.invalidText"/>
+        </member>
+        <member name="P:MAUI_BarcodeScanner.ViewModels.LoginViewModel.ShowInvalidText">
+            <inheritdoc cref="F:MAUI_BarcodeScanner.ViewModels.LoginViewModel.showInvalidText"/>
+        </member>
+        <member name="P:MAUI_BarcodeScanner.ViewModels.LoginViewModel.IsLoading">
+            <inheritdoc cref="F:MAUI_BarcodeScanner.ViewModels.LoginViewModel.isLoading"/>
+        </member>
+        <member name="F:MAUI_BarcodeScanner.ViewModels.LoginViewModel.loginCommand">
+            <summary>The backing field for <see cref="P:MAUI_BarcodeScanner.ViewModels.LoginViewModel.LoginCommand"/>.</summary>
+        </member>
+        <member name="P:MAUI_BarcodeScanner.ViewModels.LoginViewModel.LoginCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:MAUI_BarcodeScanner.ViewModels.LoginViewModel.Login"/>.</summary>
+        </member>
+        <member name="T:MAUI_BarcodeScanner.ViewModels.MopupDetailSheetViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:MAUI_BarcodeScanner.ViewModels.MopupDetailSheetViewModel.CurrentItem">
+            <inheritdoc cref="F:MAUI_BarcodeScanner.ViewModels.MopupDetailSheetViewModel.currentItem"/>
+        </member>
+        <member name="P:MAUI_BarcodeScanner.ViewModels.MopupDetailSheetViewModel.PricePerItem">
+            <inheritdoc cref="F:MAUI_BarcodeScanner.ViewModels.MopupDetailSheetViewModel.pricePerItem"/>
+        </member>
+        <member name="P:MAUI_BarcodeScanner.ViewModels.MopupDetailSheetViewModel.IsPriceInvalid">
+            <inheritdoc cref="F:MAUI_BarcodeScanner.ViewModels.MopupDetailSheetViewModel.isPriceInvalid"/>
+        </member>
+        <member name="P:MAUI_BarcodeScanner.ViewModels.MopupDetailSheetViewModel.InvalidPriceMessage">
+            <inheritdoc cref="F:MAUI_BarcodeScanner.ViewModels.MopupDetailSheetViewModel.invalidPriceMessage"/>
+        </member>
+        <member name="P:MAUI_BarcodeScanner.ViewModels.MopupDetailSheetViewModel.YOffset">
+            <inheritdoc cref="F:MAUI_BarcodeScanner.ViewModels.MopupDetailSheetViewModel.yOffset"/>
+        </member>
+        <member name="M:MAUI_BarcodeScanner.ViewModels.MopupDetailSheetViewModel.OnPricePerItemChanged(System.String)">
+            <summary>Executes the logic for when <see cref="P:MAUI_BarcodeScanner.ViewModels.MopupDetailSheetViewModel.PricePerItem"/> just changed.</summary>
+            <param name="value">The new property value that was set.</param>
+            <remarks>This method is invoked right after the value of <see cref="P:MAUI_BarcodeScanner.ViewModels.MopupDetailSheetViewModel.PricePerItem"/> is changed.</remarks>
+        </member>
+        <member name="F:MAUI_BarcodeScanner.ViewModels.MopupDetailSheetViewModel.keyboardFocusedCommand">
+            <summary>The backing field for <see cref="P:MAUI_BarcodeScanner.ViewModels.MopupDetailSheetViewModel.KeyboardFocusedCommand"/>.</summary>
+        </member>
+        <member name="P:MAUI_BarcodeScanner.ViewModels.MopupDetailSheetViewModel.KeyboardFocusedCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:MAUI_BarcodeScanner.ViewModels.MopupDetailSheetViewModel.OnKeyboardFocused"/>.</summary>
+        </member>
+        <member name="F:MAUI_BarcodeScanner.ViewModels.MopupDetailSheetViewModel.keyboardUnfocusedCommand">
+            <summary>The backing field for <see cref="P:MAUI_BarcodeScanner.ViewModels.MopupDetailSheetViewModel.KeyboardUnfocusedCommand"/>.</summary>
+        </member>
+        <member name="P:MAUI_BarcodeScanner.ViewModels.MopupDetailSheetViewModel.KeyboardUnfocusedCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:MAUI_BarcodeScanner.ViewModels.MopupDetailSheetViewModel.OnKeyboardUnfocused"/>.</summary>
+        </member>
+        <member name="F:MAUI_BarcodeScanner.ViewModels.MopupDetailSheetViewModel.increaseQuantityCommand">
+            <summary>The backing field for <see cref="P:MAUI_BarcodeScanner.ViewModels.MopupDetailSheetViewModel.IncreaseQuantityCommand"/>.</summary>
+        </member>
+        <member name="P:MAUI_BarcodeScanner.ViewModels.MopupDetailSheetViewModel.IncreaseQuantityCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:MAUI_BarcodeScanner.ViewModels.MopupDetailSheetViewModel.IncreaseQuantity"/>.</summary>
+        </member>
+        <member name="F:MAUI_BarcodeScanner.ViewModels.MopupDetailSheetViewModel.decreaseQuantityCommand">
+            <summary>The backing field for <see cref="P:MAUI_BarcodeScanner.ViewModels.MopupDetailSheetViewModel.DecreaseQuantityCommand"/>.</summary>
+        </member>
+        <member name="P:MAUI_BarcodeScanner.ViewModels.MopupDetailSheetViewModel.DecreaseQuantityCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:MAUI_BarcodeScanner.ViewModels.MopupDetailSheetViewModel.DecreaseQuantity"/>.</summary>
+        </member>
+        <member name="F:MAUI_BarcodeScanner.ViewModels.MopupDetailSheetViewModel.deleteItemCommand">
+            <summary>The backing field for <see cref="P:MAUI_BarcodeScanner.ViewModels.MopupDetailSheetViewModel.DeleteItemCommand"/>.</summary>
+        </member>
+        <member name="P:MAUI_BarcodeScanner.ViewModels.MopupDetailSheetViewModel.DeleteItemCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:MAUI_BarcodeScanner.ViewModels.MopupDetailSheetViewModel.DeleteItem"/>.</summary>
+        </member>
+        <member name="F:MAUI_BarcodeScanner.ViewModels.MopupDetailSheetViewModel.closeBottomSheetCommand">
+            <summary>The backing field for <see cref="P:MAUI_BarcodeScanner.ViewModels.MopupDetailSheetViewModel.CloseBottomSheetCommand"/>.</summary>
+        </member>
+        <member name="P:MAUI_BarcodeScanner.ViewModels.MopupDetailSheetViewModel.CloseBottomSheetCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:MAUI_BarcodeScanner.ViewModels.MopupDetailSheetViewModel.CloseBottomSheet"/>.</summary>
+        </member>
+        <member name="F:MAUI_BarcodeScanner.ViewModels.MopupDetailSheetViewModel.backgroundClickedCommand">
+            <summary>The backing field for <see cref="P:MAUI_BarcodeScanner.ViewModels.MopupDetailSheetViewModel.BackgroundClickedCommand"/>.</summary>
+        </member>
+        <member name="P:MAUI_BarcodeScanner.ViewModels.MopupDetailSheetViewModel.BackgroundClickedCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:MAUI_BarcodeScanner.ViewModels.MopupDetailSheetViewModel.BackgroundClicked"/>.</summary>
+        </member>
+        <member name="T:MAUI_BarcodeScanner.ViewModels.ScannerCameraViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:MAUI_BarcodeScanner.ViewModels.ScannerCameraViewModel.HasFiredAlready">
+            <inheritdoc cref="F:MAUI_BarcodeScanner.ViewModels.ScannerCameraViewModel.hasFiredAlready"/>
+        </member>
+        <member name="F:MAUI_BarcodeScanner.ViewModels.ScannerCameraViewModel.barcodeDetectedCommand">
+            <summary>The backing field for <see cref="P:MAUI_BarcodeScanner.ViewModels.ScannerCameraViewModel.BarcodeDetectedCommand"/>.</summary>
+        </member>
+        <member name="P:MAUI_BarcodeScanner.ViewModels.ScannerCameraViewModel.BarcodeDetectedCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:MAUI_BarcodeScanner.ViewModels.ScannerCameraViewModel.BarcodeDetected(System.Collections.Generic.IReadOnlySet{BarcodeScanning.BarcodeResult})"/>.</summary>
+        </member>
+        <member name="F:MAUI_BarcodeScanner.ViewModels.ScannerCameraViewModel.goBackCommand">
+            <summary>The backing field for <see cref="P:MAUI_BarcodeScanner.ViewModels.ScannerCameraViewModel.GoBackCommand"/>.</summary>
+        </member>
+        <member name="P:MAUI_BarcodeScanner.ViewModels.ScannerCameraViewModel.GoBackCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:MAUI_BarcodeScanner.ViewModels.ScannerCameraViewModel.GoBack"/>.</summary>
+        </member>
+        <member name="T:MAUI_BarcodeScanner.ViewModels.ScannerViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="F:MAUI_BarcodeScanner.ViewModels.ScannerViewModel.openScannerCommand">
+            <summary>The backing field for <see cref="P:MAUI_BarcodeScanner.ViewModels.ScannerViewModel.OpenScannerCommand"/>.</summary>
+        </member>
+        <member name="P:MAUI_BarcodeScanner.ViewModels.ScannerViewModel.OpenScannerCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:MAUI_BarcodeScanner.ViewModels.ScannerViewModel.OpenScanner"/>.</summary>
+        </member>
+        <member name="F:MAUI_BarcodeScanner.ViewModels.ScannerViewModel.logoutCommand">
+            <summary>The backing field for <see cref="P:MAUI_BarcodeScanner.ViewModels.ScannerViewModel.LogoutCommand"/>.</summary>
+        </member>
+        <member name="P:MAUI_BarcodeScanner.ViewModels.ScannerViewModel.LogoutCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:MAUI_BarcodeScanner.ViewModels.ScannerViewModel.Logout"/>.</summary>
+        </member>
+        <member name="T:MAUI_BarcodeScanner.ViewModels.SearchViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:MAUI_BarcodeScanner.ViewModels.SearchViewModel.IsRefreshing">
+            <inheritdoc cref="F:MAUI_BarcodeScanner.ViewModels.SearchViewModel.isRefreshing"/>
+        </member>
+        <member name="F:MAUI_BarcodeScanner.ViewModels.SearchViewModel.refreshListCommand">
+            <summary>The backing field for <see cref="P:MAUI_BarcodeScanner.ViewModels.SearchViewModel.RefreshListCommand"/>.</summary>
+        </member>
+        <member name="P:MAUI_BarcodeScanner.ViewModels.SearchViewModel.RefreshListCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:MAUI_BarcodeScanner.ViewModels.SearchViewModel.RefreshList"/>.</summary>
+        </member>
+        <member name="F:MAUI_BarcodeScanner.ViewModels.SearchViewModel.addToCartCommand">
+            <summary>The backing field for <see cref="P:MAUI_BarcodeScanner.ViewModels.SearchViewModel.AddToCartCommand"/>.</summary>
+        </member>
+        <member name="P:MAUI_BarcodeScanner.ViewModels.SearchViewModel.AddToCartCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:MAUI_BarcodeScanner.ViewModels.SearchViewModel.AddToCart(MAUI_BarcodeScanner.Models.InventoryItem)"/>.</summary>
+        </member>
+        <member name="F:MAUI_BarcodeScanner.ViewModels.SearchViewModel.addNewItemCommand">
+            <summary>The backing field for <see cref="P:MAUI_BarcodeScanner.ViewModels.SearchViewModel.AddNewItemCommand"/>.</summary>
+        </member>
+        <member name="P:MAUI_BarcodeScanner.ViewModels.SearchViewModel.AddNewItemCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:MAUI_BarcodeScanner.ViewModels.SearchViewModel.AddNewItem"/>.</summary>
+        </member>
         <member name="T:MAUI_BarcodeScanner.Resource">
             <summary>
             Android Resource Designer class.
             Exposes the Android Resource designer assembly into the project Namespace.
             </summary>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Button.TextColorTo(Microsoft.Maui.Controls.Button,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_DatePicker.TextColorTo(Microsoft.Maui.Controls.DatePicker,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Editor.TextColorTo(Microsoft.Maui.Controls.Editor,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Entry.TextColorTo(Microsoft.Maui.Controls.Entry,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_InputView.TextColorTo(Microsoft.Maui.Controls.InputView,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Label.TextColorTo(Microsoft.Maui.Controls.Label,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Picker.TextColorTo(Microsoft.Maui.Controls.Picker,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_RadioButton.TextColorTo(Microsoft.Maui.Controls.RadioButton,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_SearchBar.TextColorTo(Microsoft.Maui.Controls.SearchBar,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_TimePicker.TextColorTo(Microsoft.Maui.Controls.TimePicker,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SKUId">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SKUId" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ProductName">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ProductName" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.PricePerItem">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "PricePerItem" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.TotalPrice">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "TotalPrice" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.MRP">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "MRP" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Quantity">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Quantity" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SkuId">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SkuId" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ProductPrice">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ProductPrice" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ProductStock">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ProductStock" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsLoading">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsLoading" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.HasErrors">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "HasErrors" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ErrorMessage">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ErrorMessage" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsBusy">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsBusy" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.CurrentItem">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "CurrentItem" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsPriceInvalid">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsPriceInvalid" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.InvalidPriceMessage">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "InvalidPriceMessage" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.CashierId">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "CashierId" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Password">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Password" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.InvalidText">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "InvalidText" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ShowInvalidText">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ShowInvalidText" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.CanCloseBottomSheet">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "CanCloseBottomSheet" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.YOffset">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "YOffset" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.HasFiredAlready">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "HasFiredAlready" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsRefreshing">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsRefreshing" generated properties.</summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SKUId">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SKUId" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ProductName">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ProductName" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.PricePerItem">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "PricePerItem" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.TotalPrice">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "TotalPrice" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.MRP">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "MRP" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Quantity">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Quantity" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SkuId">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SkuId" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ProductPrice">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ProductPrice" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ProductStock">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ProductStock" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsLoading">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsLoading" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.HasErrors">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "HasErrors" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ErrorMessage">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ErrorMessage" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsBusy">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsBusy" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.CurrentItem">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "CurrentItem" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsPriceInvalid">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsPriceInvalid" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.InvalidPriceMessage">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "InvalidPriceMessage" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.CashierId">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "CashierId" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Password">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Password" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.InvalidText">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "InvalidText" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ShowInvalidText">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ShowInvalidText" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.CanCloseBottomSheet">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "CanCloseBottomSheet" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.YOffset">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "YOffset" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.HasFiredAlready">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "HasFiredAlready" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsRefreshing">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsRefreshing" generated properties.</summary>
         </member>
     </members>
 </doc>

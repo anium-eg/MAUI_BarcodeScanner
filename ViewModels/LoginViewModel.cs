@@ -6,6 +6,7 @@ using System.Text.Json;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using MAUI_BarcodeScanner.Models;
+using MAUI_BarcodeScanner.Services;
 using MAUI_BarcodeScanner.Views;
 
 
@@ -15,8 +16,11 @@ namespace MAUI_BarcodeScanner.ViewModels
     {
 
         private readonly HttpClient httpClient = new HttpClient();
-        public LoginViewModel()
+        readonly AuthService _authService;
+        public LoginViewModel(AuthService authService)
         {
+            _authService = authService;
+
             bool isLoggedIn = Preferences.Get("isLoggedIn", false);
 
             if (isLoggedIn)
@@ -56,20 +60,13 @@ namespace MAUI_BarcodeScanner.ViewModels
 
             try
             {
-                //Mocking server authentication request
-                HttpResponseMessage response = await httpClient.GetAsync("https://google.com");
 
-                ////HttpResponseMessage res1 = await httpClient.GetAsync("http://10.0.2.2:5042/api/products");
-
-
-                ////using Stream stream = await res1.Content.ReadAsStreamAsync();
-                //using StreamReader reader = new StreamReader(stream);
-                //string content = await reader.ReadToEndAsync();
-                //Console.WriteLine(content);
-                //Debug.WriteLine("----------------------------------------------" + content);
-
-                if (loginData.CashierId == "cash001" && loginData.Password == "password")
+                if (await _authService.LoginAsync(CashierId, Password))
                 {
+                    CashierId = "";
+                    Password = "";
+                    ShowInvalidText = false;
+
                     Preferences.Set("isLoggedIn", true);
                     await Shell.Current.GoToAsync($"//{nameof(ScannerPage)}");
                 }

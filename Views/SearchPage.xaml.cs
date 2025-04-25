@@ -15,7 +15,8 @@ public partial class SearchPage : ContentPage
 
     protected override void OnAppearing()
     {
-		_viewModel.RefreshListCommand.Execute(this);
+		if(_viewModel.InventoryItems.Count == 0)
+			_viewModel.RefreshListCommand.Execute(this);
         base.OnAppearing();
     }
 

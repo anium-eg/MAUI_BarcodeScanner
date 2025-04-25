@@ -32,9 +32,8 @@ namespace MAUI_BarcodeScanner.ViewModels
             pricePerItem = CurrentItem.PricePerItem.ToString();
             cartValidator = new CartItemPriceValidator();
 
-            KeyboardVisibilityState VisibilityState = KeyboardVisibilityState.Instance;
-
-            KeyboardVisibilityState.VisibilityChanged += KeyboardVisibilityState_VisibilityChanged;
+            //KeyboardVisibilityState VisibilityState = KeyboardVisibilityState.Instance;
+            //KeyboardVisibilityState.VisibilityChanged += KeyboardVisibilityChanged;
         }
 
 
@@ -59,12 +58,23 @@ namespace MAUI_BarcodeScanner.ViewModels
         public double yOffset = 0;
 
 
-        private void KeyboardVisibilityState_VisibilityChanged(object? sender, KeyboardVisibilityStateChangedEventArgs e)
-        {
-            YOffset = e.CurrentValue ? -285 : 0;
+        //private void KeyboardVisibilityChanged(object? sender, KeyboardVisibilityStateChangedEventArgs e)
+        //{
+        //    YOffset = e.CurrentValue ? -285 : 0;
+        //}
 
+        [RelayCommand]
+        public void OnKeyboardFocused()
+        {
+            YOffset = -285;
         }
 
+        [RelayCommand]
+        public void OnKeyboardUnfocused()
+        {
+            YOffset = 0;
+        }
+        
 
         partial void OnPricePerItemChanged(string value)
         {

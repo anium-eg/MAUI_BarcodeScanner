@@ -12,8 +12,7 @@
              CloseWhenBackgroundIsClicked="{Binding CanCloseBottomSheet}"
              BackgroundClickedCommand="{Binding BackgroundClickedCommand}"
              x:DataType="vm:MopupDetailSheetViewModel"
-                          TranslationY="{Binding YOffset}"
-            
+             TranslationY="{Binding YOffset}"
              >
 
     <mopups:PopupPage.Resources>
@@ -52,8 +51,20 @@
                         <Label Text="Price"  FontAttributes="Bold" FontSize="Small"  Margin="0,10,0,0"/>
                         <HorizontalStackLayout>
                             <Label VerticalOptions="Center">$</Label>
-                            <Entry Text="{Binding PricePerItem}" WidthRequest="100"/>
-                        </HorizontalStackLayout>
+                        <Entry x:Name="PriceEntry" Text="{Binding PricePerItem}" WidthRequest="100">
+                            <Entry.Behaviors>
+                                <toolkit:EventToCommandBehavior
+                                    EventName="Focused"
+                                    Command="{Binding KeyboardFocusedCommand}"
+                                    BindingContext="{Binding Source={x:Reference PriceEntry}, Path=BindingContext}" />
+                                    
+                                <toolkit:EventToCommandBehavior
+                                    EventName="Unfocused"
+                                    Command="{Binding KeyboardUnfocusedCommand}"
+                                    BindingContext="{Binding Source={x:Reference PriceEntry}, Path=BindingContext}"/>
+                            </Entry.Behaviors>
+                        </Entry>
+                    </HorizontalStackLayout>
                 </VerticalStackLayout>
 
                     <VerticalStackLayout VerticalOptions="Start" HorizontalOptions="End" Margin="30,0,0,0">

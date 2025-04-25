@@ -1,20 +1,64 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net;
+using System.Net.Http.Json;
 using System.Text;
 using MAUI_BarcodeScanner.Models;
 using MAUI_BarcodeScanner.Services;
+using Microsoft.Extensions.Configuration;
 
 namespace MAUI_BarcodeScanner.Services
 {
     public class Inventory
     {
-        public List<InventoryItem> Items = new List<InventoryItem>
+
+
+        private readonly HttpClient _httpClient;
+        private List<InventoryItem> _inventoryItems;
+        readonly IConfiguration _config;
+        private string apiUrl;
+
+        public Inventory(HttpClient httpClient, IConfiguration config)
         {
-            new InventoryItem { SKUId = "705632441947", ProductName = "Cycling Gloves", Price=30, Stock=5 },
-            new InventoryItem { SKUId = "8906004863080", ProductName = "Origami Tissues", Price=7, Stock=5 },
-            new InventoryItem { SKUId = "4987176191359", ProductName = "Vicks Inhaler", Price=5, Stock=5 },
-            new InventoryItem {SKUId = "194632852486", ProductName = "Lenovo Backpack", Price = 70, Stock = 5},
-            new InventoryItem {SKUId = "01234567890128", ProductName = "Cycling Jersey", Price = 60, Stock = 5},
-        };
+            _httpClient = httpClient;
+            _inventoryItems = new List<InventoryItem>();
+            _config = config;
+            apiUrl = _config["ServerUrl"] + "/inventory";
+        }
+
+        public List<InventoryItem> GetAllItems()
+        {
+            return _inventoryItems;
+        }
+
+
+        public bool ItemExists(string skuId)
+        {
+            return _inventoryItems.Any(item => item.SKUId == skuId);
+        }
+
+
+        public async Task RefreshInventoryAsync()
+        {
+            _inventoryItems = await FetchInventoryFromApiAsync();
+        }
+
+        private async Task<List<InventoryItem>> FetchInventoryFromApiAsync()
+        {
+            var response = await _httpClient.GetAsync(apiUrl);
+            response.EnsureSuccessStatusCode();
+
+            var inventoryItems = await response.Content.ReadFromJsonAsync<List<InventoryItem>>();
+            return inventoryItems;
+        }
+
+        public async Task<HttpResponseMessage> AddInventoryItemAsync(InventoryItem newItem)
+        {
+            var response = await _httpClient.PostAsJsonAsync(apiUrl, newItem);
+            return response;
+        }
+
+
     }
 }

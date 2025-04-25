@@ -9,7 +9,7 @@ namespace MAUI_BarcodeScanner.Services
     public class Cart
     {
 
-        readonly ObservableCollection<CartItem> items;
+        public readonly ObservableCollection<CartItem> items;
 
         public int totalCost;
 

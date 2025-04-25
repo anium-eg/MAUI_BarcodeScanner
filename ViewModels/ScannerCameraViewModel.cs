@@ -31,7 +31,7 @@ namespace MAUI_BarcodeScanner.ViewModels
             {
                 HasFiredAlready = true;
                 IEnumerable<CartItem> scannedItems = await _dataStore.GetItemsAsync();
-                InventoryItem? scannedItem = _inventory.Items.Find(item => item.SKUId == result.RawValue); 
+                InventoryItem? scannedItem = _inventory.GetAllItems().Find(item => item.SKUId == result.RawValue); 
 
                 if (scannedItem != null)
                 {

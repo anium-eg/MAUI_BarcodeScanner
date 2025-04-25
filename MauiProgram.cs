@@ -1,10 +1,12 @@
-﻿using BarcodeScanning;
+﻿using System.Reflection;
+using BarcodeScanning;
 using CommunityToolkit.Maui;
 using KeyboardVisibilityListener;
 using MAUI_BarcodeScanner.Components;
 using MAUI_BarcodeScanner.Services;
 using MAUI_BarcodeScanner.ViewModels;
 using MAUI_BarcodeScanner.Views;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Mopups.Hosting;
 using The49.Maui.BottomSheet;
@@ -19,7 +21,8 @@ public static class MauiProgram
 		var builder = MauiApp.CreateBuilder();
 
 		builder
-			.UseMauiApp<App>().UseBarcodeScanning()
+			.UseMauiApp<App>()
+			.UseBarcodeScanning()
 			.UseMauiCommunityToolkit()
 			.UseBottomSheet()
 			.ConfigureMopups()
@@ -31,18 +34,30 @@ public static class MauiProgram
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
 			});
 
+        var assembly = Assembly.GetExecutingAssembly();
+        using var stream = assembly.GetManifestResourceStream("MAUI_BarcodeScanner.appsettings.json");
 
-		builder.Services.AddSingleton<HttpClient>();
+        var config = new ConfigurationBuilder()
+            .AddJsonStream(stream)
+            .Build();
+
+        builder.Configuration.AddConfiguration(config);
+
+        builder.Services.AddSingleton<HttpClient>();
 
 		builder.Services.AddSingleton<Cart>();
 		builder.Services.AddSingleton<Inventory>();
+		builder.Services.AddSingleton<AuthService>();
 
+		builder.Services.AddTransient<LoginViewModel>();
 		builder.Services.AddTransient<CartViewModel>();
 		builder.Services.AddTransient<ScannerCameraViewModel>();
 		builder.Services.AddTransient<ItemDetailsViewModel>();
 		builder.Services.AddTransient<SearchViewModel>();
-		//builder.Services.AddTransient<MopupDetailSheetViewModel>();
 
+		builder.Services.AddTransient<AddNewInventoryItemPopupViewModel>();
+
+		builder.Services.AddTransient<AddNewInventoryItemPopup>();
 		builder.Services.AddTransient<ItemDetailSheet>();
 
 		#if DEBUG

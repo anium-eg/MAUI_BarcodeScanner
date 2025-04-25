@@ -1,7 +1,10 @@
-﻿namespace MAUI_BarcodeScanner.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace MAUI_BarcodeScanner.Models
 {
     public class InventoryItem
     {
+        [Key]
         public string SKUId { get; set; }
         public string ProductName { get; set; }
         public int Price { get; set; }

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<mopups:PopupPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUI_BarcodeScanner.Components.AddNewInventoryItemPopup"
+             xmlns:mopups="clr-namespace:Mopups.Pages;assembly=Mopups"
+             xmlns:animations="clr-namespace:Mopups.Animations;assembly=Mopups"
+             xmlns:vm="clr-namespace:MAUI_BarcodeScanner.ViewModels"
+             xmlns:converters="clr-namespace:MAUI_BarcodeScanner.Helpers.Converters"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             x:DataType="vm:AddNewInventoryItemPopupViewModel"
+             CloseWhenBackgroundIsClicked="True"
+             BackgroundClickedCommand="{Binding PopupBackgroundClickedCommand}"
+             Title="AddNewInvenotyItemPopup"
+             BackgroundColor="#80000000"
+                  Padding="500"
+                 
+             >
+    <Border  
+            HeightRequest="550"  
+            WidthRequest="350"     
+
+            Background="White">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="10"/>
+            </Border.StrokeShape>
+
+            <Grid>
+            <Grid x:Name="LoadingOverlay"
+                  BackgroundColor="Black"
+                  Opacity="0.5"
+                  IsVisible="{Binding IsLoading}"
+                  InputTransparent="False"
+                  >
+                <Grid.GestureRecognizers>
+                    <!-- Empty tap gesture recognizer to block input during loading-->
+                    <TapGestureRecognizer />
+                </Grid.GestureRecognizers>
+
+                <ActivityIndicator IsRunning="{Binding IsLoading}"
+                           VerticalOptions="Center"
+                           HorizontalOptions="Center" />
+            </Grid>
+
+            <VerticalStackLayout Spacing="20" Padding="20">
+                    <Label Text="Add New Item" FontSize="Large" FontAttributes='Bold' Margin="0,10"/>
+
+                    <VerticalStackLayout>
+                        <Label>
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="SKU ID" />
+                                    <Span Text=" *" TextColor="Red" />
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                        <Entry Text ="{Binding SkuId}" Margin="0,0,0,10"/>
+
+                        <Label>
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="Product Name" />
+                                    <Span Text=" *" TextColor="Red" />
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                        <Entry Text ="{Binding ProductName}" Margin="0,0,0,10"/>
+
+                        <Label>
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="MRP" />
+                                    <Span Text=" *" TextColor="Red" />
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                        <Entry Text ="{Binding ProductPrice}" Margin="0,0,0,10"/>
+
+                        <Label>
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="Stock" />
+                                    <Span Text=" *" TextColor="Red" />
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                        <Entry Text ="{Binding ProductStock}" Margin="0,0,0,10"/>
+                    </VerticalStackLayout>
+
+                    <Label Text="{Binding ErrorMessage}" IsVisible="{Binding HasErrors}" TextColor="IndianRed"/>
+
+                    <Button Command="{Binding SubmitNewItemRequestCommand}" Text="Submit" VerticalOptions="End" />
+                </VerticalStackLayout>
+            </Grid>
+            
+    </Border>
+        
+
+</mopups:PopupPage>

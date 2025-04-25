@@ -1,8 +1,5 @@
 ﻿/bin
 /obj
 /bin/Debug
-################################################################################
-# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
-################################################################################
 
 /bin/Debug/net9.0-windows10.0.19041.0/win10-x64
